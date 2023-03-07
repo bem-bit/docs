@@ -15,7 +15,7 @@ Essa documentação é pública e é referente aos serviços disponíbilizados p
 __Link de produção__
 
 ```
-https://api.bembit.com/
+https://api.bembit.com/api/v1
 ```
 
 ### Em caso de dúvidas

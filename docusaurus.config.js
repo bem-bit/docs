@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'BEMBIT',
   tagline: 'Bembit docs',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-32x32.png',
 
   // Set the production url of your site here
   url: 'https://docs.bembit.com/',
