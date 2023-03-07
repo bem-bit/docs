@@ -31,4 +31,4 @@ curl -X 'GET' \
 | --------- | ---- | ------------ | --------- |
 | `id` | `string` | `undefined` | ID da transação gerada. |
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/api/v1/client/payments/charges).
+Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/BemPix/get_client_payments_charges_qrcode__id__qrcode_png).

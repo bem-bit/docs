@@ -8,7 +8,7 @@ Para gerar uma cotacão é necessário informar o par de moedas para a transaç�
 
 URL
 ```
-api/v1/integrations/quote
+api/v1/integrations/quotation
 ```
 
 Método

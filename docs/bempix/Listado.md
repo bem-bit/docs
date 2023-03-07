@@ -8,7 +8,6 @@ Para solicitar um listado das cobranças realizadas é necessário fornecer via 
 **URL**
 ```
 https://api.bembit.com/api/v1/client/payments/charges
-
 ``` 
 
 **Método**

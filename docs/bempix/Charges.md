@@ -9,7 +9,6 @@ Para consultar o saldo é necessário fornecer via ***header*** os parametros re
 **URL**
 ```
 https://api.bembit.com/api/v1/client/payments/charges
-
 ``` 
 
 **Método**

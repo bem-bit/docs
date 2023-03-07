@@ -53,4 +53,4 @@ curl -X 'POST' \
 
 
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/api/v1/client/payments/charges).
+Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/BemPix/post_client_payments_swap).
