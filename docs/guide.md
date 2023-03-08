@@ -26,14 +26,12 @@ Se você tiver qualquer dúvida sobre a Bembit pode consultar a nossa [Central d
 Nossa Central de Ajuda funciona como um guia completo para que você encontre rapidamente a resposta para as suas dúvidas. Nela, você pode navegar por dúvidas frequentes e explicações sobre várias questões relacionadas ao nosso negócio. Ela pode ser acessada pelo seguinte link: [Fale conosco](https://bembit.com/fale-conosco).
 
 #### Atendimento:
-É o time responsável por resolver dúvidas sobre os produtos da Bembit. O seu atendimento é realizado através do e-mail, enviando a sua dúvida para [duvidas@bembit.com](mailto:duvidas@bembit.com).
-
-Se você ainda não é cliente e tem alguma dúvida sobre o uso dos nossos produtos ou sobre a integração, pode entrar em contato pelo e-mail [comercial@bembit.com](mailto:comercial@bembit.com).
+É o time responsável por resolver dúvidas sobre os produtos e integrações da Bembit. O seu atendimento é realizado através do e-mail, enviando a sua dúvida para [contato@bembit.com](mailto:contato@bembit.com).
 
 #### Suporte:
 É responsável por resolver dúvidas técnicas. A equipe de suporte mantém contato apenas por meio de tickets, que podem ser abertos enviando a sua dúvida para [suporte@bembit.com](mailto:suporte@bembit.com).
 
-Por fim, se você possui alguma dúvida ou sugestão para tornar a nossa documentação melhor, mande um e-mail para [contato@bembit.com](mailto:contato@bembit.com) e estamos prontos para ajudar!
+<!-- Por fim, se você possui alguma dúvida ou sugestão para tornar a nossa documentação melhor, mande um e-mail para [contato@bembit.com](mailto:contato@bembit.com) e estamos prontos para ajudar! -->
 
 ### Referência da API
 

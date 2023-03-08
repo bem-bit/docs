@@ -43,7 +43,7 @@ curl -X 'GET' \
   "expiresIn": 3600,
   "receiver": {
     "address": "xxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "token": "USDC",
+    "token": "USDC", // To
     "network": 56
   }
 }
