@@ -4,7 +4,7 @@ sidebar_position: 2
 
 ## Criar cobrança
 
-Para consultar o saldo é necessário fornecer via ***header*** os parametros requeridos pelo ***end-point.***
+Para gerar uma cobrança é necessário fornecer via ***header*** os parametros requeridos pelo ***end-point.***
 
 **URL**
 ```

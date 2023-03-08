@@ -4,7 +4,7 @@ sidebar_position: 2
 
 ## Listado das Redes disponiveis
 
-Para consultar o saldo é necessário fornecer via ***header*** os parametros requeridos pelo ***end-point.***
+Para receber uma lista com as redes disponiveis é necessário realizar uma solicitação do tipo **POST** ao ***end-point*** seguindo a seguinte estrutura.
 
 **URL**
 ```

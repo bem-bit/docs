@@ -26,7 +26,7 @@ Se você tiver qualquer dúvida sobre a Bembit pode consultar a nossa [Central d
 Nossa Central de Ajuda funciona como um guia completo para que você encontre rapidamente a resposta para as suas dúvidas. Nela, você pode navegar por dúvidas frequentes e explicações sobre várias questões relacionadas ao nosso negócio. Ela pode ser acessada pelo seguinte link: [Fale conosco](https://bembit.com/fale-conosco).
 
 #### Atendimento:
-É o time responsável por resolver dúvidas sobre os produtos da Bembit. O seu atendimento é realizado através do e-mail, enviando a sua dúvida para [duvidas@bembit.com](mailto:duvidas@bembit.com) ou acessando nosso canao no [Discord](https://discord.gg/nMzu3uUs).
+É o time responsável por resolver dúvidas sobre os produtos da Bembit. O seu atendimento é realizado através do e-mail, enviando a sua dúvida para [duvidas@bembit.com](mailto:duvidas@bembit.com).
 
 Se você ainda não é cliente e tem alguma dúvida sobre o uso dos nossos produtos ou sobre a integração, pode entrar em contato pelo e-mail [comercial@bembit.com](mailto:comercial@bembit.com).
 

@@ -2,9 +2,9 @@
 sidebar_position: 4
 ---
 
-## Listado dos Tokens
+## Valor do SWAP
 
-Traz uma lista de tokens disponíveis para trade através da rede fornecendo o nome da rede.
+Para receber uma lista com as redes disponiveis é necessário realizar uma solicitação do tipo **GET** ao ***end-point*** seguindo a seguinte estrutura.
 
 **URL**
 ```
