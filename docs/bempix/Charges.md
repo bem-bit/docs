@@ -17,28 +17,6 @@ https://api.bembit.com/api/v1/client/payments/charges
 POST
 ```
 
-**cURL**
-
-```cURL
-curl -X 'POST' \
-  'https://api.bembit.com/api/v1/client/payments/charges' \
-  -H 'accept: application/json' \
-  -H 'api: [Seu API Key]' \
-  -H 'secret: [Seu Secret]' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "value": 100,
-  "identifier": "my-identifier-charge-id",
-  "expiresIn": 3600,
-  "receiver": {
-    "address": "xxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "token": "USDC",
-    "network": 56
-  }
-}'
-```
-
-
   **Parametros**
   
   | Parametro | Tipo | Valor padrão | Descrição |
@@ -46,6 +24,13 @@ curl -X 'POST' \
   | `api` | `string` | `undefined` | API Key obtída na plataforma |
   | `secret` | `string` | `undefined` | Secret obtído na plataforma. |
 
+
+______________
+
+# cURL
+
+Exemplo de **cURL** da solicitação **POST** para gerar uma cobrança utilizando a ***API** da **Bembit**
+![Bembit API](/img/bembit_api_charge_curl.png "cURL")
 
 **Request BODY:**
 
@@ -56,20 +41,6 @@ curl -X 'POST' \
 - ***token:*** Simbolo do **token** que esta sendo negociado na operação.
 - ***network:*** *Id* da blockchain que negocia o ***token*** escolhido.
 
-```JSON
-{
-  "value": 100,
-  "identifier": "my-identifier-charge-id",
-  "expiresIn": 3600,
-  "receiver": {
-    "address": "xxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "token": "USDC",
-    "network": 56
-  }
-}
-```
-
-
-
+![Bembit API](/img/bembit_api_charge_request.png "Request Body")
 
 Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/BemPix/post_client_payments_charges).
