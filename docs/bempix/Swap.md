@@ -11,16 +11,14 @@ Para realizar a troca de BRL por um **TOKEN** via **API** é necessario fornecer
 https://api.bembit.com/api/v1/client/payments/swap
 ``` 
 
-**Request BODY:**
+# cURL
 
-```JSON
-{
-  "network": "[Id de Rede]",
-  "addressToReceive": "[wallet address]",
-  "tokenToReceive": "[token]",
-  "amount": "[valor]"
-}
-```
+- ***network:*** Numero de identificação da ***Blockchain*** que da suporte à negociação com o *Token* escolhido.
+- ***addressToReceive:*** Endereço da *Wallet*(carteira) à que irão ser transferidos os **Tokens** resultado da transação.
+- ***tokenToReceive:*** Refere-se ao *Token* que esta sendo negociado.
+
+Exemplo do **REQUEST BODY** da solicitação **POST** para a realização de uma troca de *Reais Brasileiros* a um *Token* especificado na hora da criação da cobrança utilizando a ***API** da **Bembit**.
+![Bembit API](/img/bembit_api_swap_request.png "Request Body")
 
 **Método**
 
@@ -28,28 +26,26 @@ https://api.bembit.com/api/v1/client/payments/swap
 POST
 ```
 
-**cURL**
+**Parametros** 
 
-```cURL
-curl -X 'POST' \
-  'https://api.bembit.com/api/v1/client/payments/swap' \
-  -H 'accept: application/json' \
-  -H 'api: [Seu API Key]' \
-  -H 'secret: [Seu Secret]' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "network": [Id de Rede],
-  "addressToReceive": "[Wallet Address]",
-  "tokenToReceive": "[Token]",
-  "amount": 1
-}'
-```
-
-**Parametros**
+:::note Observação
+Os parametros para essa solicitação devem ser passados ao ***end-point*** via *headers* no momento da solicitação.
+:::
 
 | Parametro | Tipo | Valor padrão | Descrição |
 | --------- | ---- | ------------ | --------- |
-| `id` | `string` | `undefined` | ID da transação gerada. |
+| `api` | `string` | `undefined` | API Key obtída na plataforma |
+| `secret` | `string` | `undefined` | Secret obtído na plataforma. |
+
+______________
+
+# cURL
+
+- ***application:*** A função da *API* que esta sendo utilizada.
+
+Exemplo de **cURL** da solicitação **POST** para a realização de uma troca de *Reais Brasileiros* a um *Token* especificado na hora da criação da cobrança utilizando a ***API** da **Bembit**.
+![Bembit API](/img/bembit_api_swap_curl.png "cURL")
+
 
 
 

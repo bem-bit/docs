@@ -27,7 +27,7 @@ ______________
 
 # cURL
 
-Exemplo de **cURL** da solicitação **GET** para consultar o saldo disponivel de um cliente utilizando a ***API** da **Bembit**
+Exemplo de **cURL** da solicitação **GET** mostrar uma lista com as cobranças realizadas utilizando a ***API** da **Bembit** para um cliente especifico.
 ![Bembit API](/img/bembit_api_charge_list_curl.png "cURL")
 
 **Response BODY:**
