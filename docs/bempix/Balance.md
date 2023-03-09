@@ -19,7 +19,9 @@ GET
 
 **Parametros** 
 
-São Passados ao ***End-point*** via *Headers* na solicitação;
+:::note Observação
+Os parametros para essa solicitação devem ser passados ao ***end-point*** via *headers* no momento da solicitação.
+:::
 
 | Parametro | Tipo | Valor padrão | Descrição |
 | --------- | ---- | ------------ | --------- |
