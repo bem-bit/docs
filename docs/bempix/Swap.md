@@ -17,6 +17,8 @@ https://api.bembit.com/api/v1/client/payments/swap
 - ***addressToReceive:*** Endereço da *Wallet*(carteira) à que irão ser transferidos os **Tokens** resultado da transação.
 - ***tokenToReceive:*** Refere-se ao *Token* que esta sendo negociado.
 
+**Request BODY:**
+
 Exemplo do **REQUEST BODY** da solicitação **POST** para a realização de uma troca de *Reais Brasileiros* a um *Token* especificado na hora da criação da cobrança utilizando a ***API** da **Bembit**.
 ![Bembit API](/img/bembit_api_swap_request.png "Request Body")
 

@@ -17,16 +17,17 @@ https://api.bembit.com/api/v1/integrations/quotation/tokens/{network}
 GET
 ```
 
-**Example Value:**
+# cURL
 
-```JSON
-[
-  {
-    "symbol": "string",
-    "name": "string",
-    "address": "string"
-  }
-]
-```
+Exemplo de **cURL** da solicitação do tipo **GET** para obter um listado de tokens suportados numa **blockchain** especifica, gerada utilizando a ***API** da **Bembit**.
+![Bembit API](/img/bembit_api_tokens_by_network_curl.png "cURL")
+
+# Valores de exemplo
+
+- ***symbol:*** Simbolo do **Token** de cotação na operação.
+- ***name:*** Nome do **Token**.
+- ***address:*** Address do **Smart Contract** do **Token** listado.
+![Bembit API](/img/bembit_api_tokens_by_network_example_values.png "cURL")
+
 
 Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Quotation/get_quotation_tokens__network_).

@@ -4,13 +4,11 @@ sidebar_position: 2
 
 # Começando
 
-Primeiro é necessário realizar o [cadastro/login](https://app.bembit.com/signin) na plataforma.
-
-Acesse [app.bembit.com](https://app.bembit.com) e para realizar o cadastro ou efetuar a entrada no sistema.
+Entre em contato com a nossa equipe de relacionamento a traves do nosso [email](mailto:contato@bembit.com) para obter mais informações sobre a nossa API e solicitar accesso.
 
 ## Gerando as chaves
 
-Após, acesse o menu __"API"__  e em seguida clique no botão __"Gerar chave"__.
+Após obter accesso, acesse o menu __"API"__  e em seguida clique no botão __"Gerar chave"__.
 
 Pronto, uma chave de `API` foi gerada, e nela contêm duas informações:
 

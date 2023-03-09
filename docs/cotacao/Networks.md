@@ -6,26 +6,25 @@ sidebar_position: 2
 
 Para receber uma lista com as redes disponiveis é necessário realizar uma solicitação do tipo **POST** ao ***end-point*** seguindo a seguinte estrutura.
 
-**URL**
+URL
 ```
-https://api.bembit.com/api/v1/integrations/quotation/networks
-``` 
+api/v1/integrations/quotation/networks
+```
 
-**Método**
-
+Método
 ```
 POST
 ```
 
-**Example Value:**
+:::note Observação
+Não possui parametros.
+:::
 
-```JSON
-[
-  {
-    "network": 56,
-    "name": "string"
-  }
-]
-```
+# Valores de exemplo:
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/BemPix/post_client_payments_charges).
+- ***network:*** Id da *Blockchain*(rede) que da suporte à negociação dos **Tokens** inclusos na transação.
+- ***name:*** Nome do **Token**.
+
+![Bembit API](/img/bembit_api_networks_value.png "Example value")
+
+Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Quotation/post_integrations_quote).
