@@ -37,7 +37,8 @@ Exemplo de **cURL** da solicitação **GET** para consultar o saldo disponivel d
 - ***amount:*** O valor da transação.
 - ***fee:*** Valor da Taxa de transação, se houver.
 - ***Total:*** O custo total da transação mais a taxa.
-- ***brCode:*** O custo total da transação mais a taxa.
+- ***code:*** Código identificador da transação, é gerado automaticamente pelo nosso *API*.
+- ***brCode:*** Codigo gerado pelo nosso ***API*** em representação da rota do **QR Code** de pagamento.
 - ***qrCodeImage:*** URL da image do ***QR Code*** gerada automaticamente pelo nosso *API* para a realização do pagamento via **PIX**.
 - ***expiresAt:*** Data exata de expiração do ***QR Code***, após essa data o código não tem mais validade e *é necessario gerar um novo codigo*.
 - ***status:*** Representa o estado atual da cobrança, pudendo ser ***ATIVE*** se ainda estiver dentro do prazo de validade, ou ***EXPIRED** caso o prazo tiver acabado.
