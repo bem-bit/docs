@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-## Valor do SWAP
+# Simulação de SWAP
 
 Para receber uma lista com as redes disponiveis é necessário realizar uma solicitação do tipo **GET** ao ***end-point*** seguindo a seguinte estrutura.
 
