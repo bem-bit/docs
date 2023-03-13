@@ -18,6 +18,13 @@ __Link de produção__
 https://api.bembit.com/api/v1
 ```
 
+
+__Link de teste (sandbox)__
+
+```
+https://api-sandbox.bembit.com/api/v1
+```
+
 ### Em caso de dúvidas
 
 Se você tiver qualquer dúvida sobre a Bembit pode consultar a nossa [Central de Ajuda](https://bembit.com/faq) ou entrar em contato com as nossas equipes de Suporte ou Atendimento:
