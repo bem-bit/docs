@@ -6,7 +6,7 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Documentação ${siteConfig.title}`}
+      title={`Documentation ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
       <div className="container">
