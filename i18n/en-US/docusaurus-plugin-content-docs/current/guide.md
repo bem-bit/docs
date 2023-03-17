@@ -6,35 +6,31 @@ sidebar_position: 1
 
 Bembit is a technology service that provides what is needed to connect your application to the **Cryptocurrencies** universe.
 
-Nesta documentação você pode explorar todos os produtos e funcionalidades que nossa API oferece e adaptá-los ao sua aplicação.
+In this documentation you can explore all our products and functionalities offered via API for further implementation in you own apps.
 
-Essa documentação é pública e é referente aos serviços disponíbilizados pela Bembit.
+This is a public documentation that can be used as a reference to all available services on Bembit.
 
-
-
-__Link de produção__
+__Production environment URL__
 
 ```
 https://api.bembit.com/api/v1
 ```
 
-### Em caso de dúvidas
+### Need some extra help?
 
-Se você tiver qualquer dúvida sobre a Bembit pode consultar a nossa [Central de Ajuda](https://bembit.com/faq) ou entrar em contato com as nossas equipes de Suporte ou Atendimento:
+In case you still have any doubts about **Bembit**, you can get in touch to our [Help center](https://bembit.com/faq) or contact our **Customer Support**:
 
-#### Central de Ajuda:
-Nossa Central de Ajuda funciona como um guia completo para que você encontre rapidamente a resposta para as suas dúvidas. Nela, você pode navegar por dúvidas frequentes e explicações sobre várias questões relacionadas ao nosso negócio. Ela pode ser acessada pelo seguinte link: [Fale conosco](https://bembit.com/fale-conosco).
+#### Help Center:
+Our **Help Center** acts as a full guide for you to find faster, the answer of any doubt you could have. On it, you can browse our FAQs with their explanations related to our *bussiness*. It can be accessed by clicking the following link: [Contact Us](https://bembit.com/fale-conosco).
 
-#### Atendimento:
-É o time responsável por resolver dúvidas sobre os produtos e integrações da Bembit. O seu atendimento é realizado através do e-mail, enviando a sua dúvida para [contato@bembit.com](mailto:contato@bembit.com).
+#### Customer Relationship Department:
+Is the team in charge of answering any question about Bembit's products or implementations. They will get in touch by answering any question sent to [contato@bembit.com](mailto:contato@bembit.com).
 
-#### Suporte:
-É responsável por resolver dúvidas técnicas. A equipe de suporte mantém contato apenas por meio de tickets, que podem ser abertos enviando a sua dúvida para [suporte@bembit.com](mailto:suporte@bembit.com).
+#### Customer Support:
+The team meant to aid our customers solve any technical issues. Our **Customer Support** gets in touch only via *tickets*, that can be issued by sending your questions to [suporte@bembit.com](mailto:suporte@bembit.com).
 
-<!-- Por fim, se você possui alguma dúvida ou sugestão para tornar a nossa documentação melhor, mande um e-mail para [contato@bembit.com](mailto:contato@bembit.com) e estamos prontos para ajudar! -->
+### API Reference
 
-### Referência da API
+Bembit's ***API*** was developed following the best standards [REST](https://en.wikipedia.org/wiki/Representational_State_Transfer).
 
-A API Bembit foi desenvolvida de acordo com os melhores padrões [REST](https://en.wikipedia.org/wiki/Representational_State_Transfer).
-
-As operações são feitas por requisições aos endpoints, de acordo com os verbos HTTP, com corpos de mensagem em [JSON](http://www.json.org/). As respostas podem ser interpretadas usando o código de status HTTP. Isso permite que qualquer aplicação consuma a API de forma simples e clara, independente da linguagem utilizada.
+All operations are made by sending *requests* to our end-points , following the ***HTTP*** standards, with ***[JSON](http://www.json.org/)*** encoded body messages. The *responses* can be handled using ***HTTP*** status codes. That allows any app to consume our ***API*** in a clear and simple way, no matter what programation languaje is used.
