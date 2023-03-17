@@ -2,42 +2,40 @@
 sidebar_position: 2
 ---
 
-# Começando
+# Introduction
 
-Entre em contato com a nossa equipe de relacionamento a traves do nosso [email](mailto:contato@bembit.com) para obter mais informações sobre a nossa API e solicitar accesso.
+Get in touch with our ***Customer Relationship Department*** by sending an *E-mail* to [email](mailto:contato@bembit.com) in order to get **access** to our ***API*** or even to get more information regarding its implementation.
 
-## Gerando as chaves
+## Getting API Keys
 
-Após obter accesso, acesse o menu __"API"__  e em seguida clique no botão __"Gerar chave"__.
+Right after getting access, go to **menu** > __"API"__ then click on the __"Gerar chave"__ button.
 
-Pronto, uma chave de `API` foi gerada, e nela contêm duas informações:
+**Well done!**, a new `API` Key was issued for you account, now you will see the following information:
 
-| Chave | Descrição |
+| Key | Description |
 | ------ | ------ | 
-| `api` | Hash de 10 dígitos referente a identificação da chave. |
-| `secret` | Hash de 32 dígitos referente a sua chave privada. |
+| `api` | It's a 10 digit **HASH** representing the ***Public Key*** ID. |
+| `secret` | The 32 digits **HASH** that represents your ***Private Key***. |
 
-Você irá utilizar essas chaves no `HEADER` das requisições para a nossa `API`.
+You need to pass the **Keys** inside the requisition via `HEADER` to our `API`.
 
-:::caution Atencão
-Certifique de copiar e guarda a chave `secret`, pois após a criação você não terá mais acesso a mesma na plataformas
+:::caution WARNING!
+After the **API Keys** issuing process you will be shown your **Private keys** one only time, and after that, you will not be able to see the same ***Private Key*** any more, so make sure you write them down in a safe place so you don't lose that information, in case you miss that time to save the keys you will need to issue a new pair of keys in order to keep using our **API**.
 :::
 
+## Setting your requisition up
 
+You can test our ***API's*** **end-points** by using [Postman](https://www.postman.com/), [Insominia](https://insomnia.rest/) or any other ***API*** software tool.
 
-## Configurando sua requisição
-
-Você pode testar usando o [Postman](https://www.postman.com/), [Insominia](https://insomnia.rest/) ou outra aplicação similar de sua preferência para realizar os testes de integração a nossa `API`.
-
-Com posse das chaves, será necessário configurar os `headers` da aplicação, da seguinte forma:
+Once you've got the *Keys*, it will be required to set the `headers` of the application up by following this pattern:
 
 ```
 headers: {
-    api: <SUA_API>
-    secret: <SUA_API_SECRET>
+    api: <YOUR_API_ID>
+    secret: <YOUR_API_SECRET>
 }
 ```
 
-:::note Observação
-Nem todos os endpoints da nossa API precisam da referencia da chave de api/secret nos headers, você pode conferir a necessidade dos mesmos através do nosso [Swagger](https://api.bembit.com/docs).
+:::note NOTE:
+Not all of our *End-points* need a reference to your *Private key* inside the `Headers`, you can check where is specifically needed by consulting our [Swagger](https://api.bembit.com/docs).
 :::
