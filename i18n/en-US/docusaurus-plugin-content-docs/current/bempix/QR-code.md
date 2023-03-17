@@ -19,9 +19,9 @@ GET
 
 **Request Params**
 
-| Parametro | Tipo | Valor padrão | Descrição |
+| Param | Type | Default value | Description |
 | --------- | ---- | ------------ | --------- |
-| `id` | `string` | `undefined` | ID da transação gerada. |
+| `id` | `string` | `undefined` | Transaction ID. |
 
 
 :::note NOTE:

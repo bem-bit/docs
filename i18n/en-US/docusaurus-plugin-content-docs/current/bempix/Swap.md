@@ -4,51 +4,46 @@ sidebar_position: 5
 
 ## SWAP
 
-Para realizar a troca de BRL por um **TOKEN** via **API** é necessario fornecer via **headers** o **API Key** e o **Secret** gerados na sua conta.
+In order to make a **SWAP** between two **TOKENs**, you need to make a request and provide via ***headers*** the required params.
 
-**URL**
+**Full Endpoint URL**
 ```
 https://api.bembit.com/api/v1/client/payments/swap
 ``` 
 
-# cURL
-
-- ***network:*** Numero de identificação da ***Blockchain*** que da suporte à negociação com o *Token* escolhido.
-- ***addressToReceive:*** Endereço da *Wallet*(carteira) à que irão ser transferidos os **Tokens** resultado da transação.
-- ***tokenToReceive:*** Refere-se ao *Token* que esta sendo negociado.
-
-**Request BODY:**
-
-Exemplo do **REQUEST BODY** da solicitação **POST** para a realização de uma troca de *Reais Brasileiros* a um *Token* especificado na hora da criação da cobrança utilizando a ***API** da **Bembit**.
-![Bembit API](/img/bembit_api_swap_request.png "Request Body")
-
-**Método**
+**Method**
 
 ```
 POST
 ```
 
-**Parametros** 
+**Request Params** 
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao ***end-point*** via *headers* no momento da solicitação.
+| Param | Type | Default value | Description |
+| --------- | ---- | ------------ | --------- |
+| `api` | `string` | `undefined` | Your API Public Key. |
+| `secret` | `string` | `undefined` | Your API Private Key. |
+
+
+:::note NOTE:
+The required params for this request must be sent to the ***end-point*** via *headers*.
 :::
 
-| Parametro | Tipo | Valor padrão | Descrição |
-| --------- | ---- | ------------ | --------- |
-| `api` | `string` | `undefined` | API Key obtída na plataforma |
-| `secret` | `string` | `undefined` | Secret obtído na plataforma. |
-
-______________
-
 # cURL
-
-- ***application:*** A função da *API* que esta sendo utilizada.
-
-Exemplo de **cURL** da solicitação **POST** para a realização de uma troca de *Reais Brasileiros* a um *Token* especificado na hora da criação da cobrança utilizando a ***API** da **Bembit**.
+This is an example of **cURL** used in a **POST** request used for swapping two **Tokens** using **Bembit's** *API*.
 ![Bembit API](/img/bembit_api_swap_curl.png "cURL")
 
+- ***network:*** The Blockchain's *Id* that supports negotiating the chosen ***tokens***.
+- ***addressToReceive:*** The *Crypto Wallet* address that will receive the bought **Tokens**.
+- ***tokenToReceive:*** It refers to the *Token* chosen for buy.
+- ***Amount:*** Represents amount of tokens to receive.
 
 
+**Request BODY:**
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/BemPix/post_client_payments_swap).
+This is an example of a **REQUEST BODY** setting, used in a **POST** request for completing a *Crypto Swap*, trading from a local currency to a *Crypto Token*, using **Bembit's** ***API*** 
+
+![Bembit API](/img/bembit_api_swap_request.png "Request Body")
+
+
+SEE IT IN ACTION!!! in [Swagger](https://api.bembit.com/docs/#/BemPix/post_client_payments_swap).
