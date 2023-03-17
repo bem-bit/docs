@@ -2,45 +2,49 @@
 sidebar_position: 2
 ---
 
-## Criar cobrança
+## Generating charges
 
-Faz a solicitação de cobrança e retorna um código **QRCode** com o valor informado para pagamento
+Generates a charge and returns a **QR Code** with its value imbued in it.
 
-**URL**
+**Full Endpoint URL**
 ```
 https://api.bembit.com/api/v1/client/payments/charges
 ``` 
 
-**Método**
+**Method**
 
 ```
 POST
 ```
 
-  **Parametros**
-  
-  | Parametro | Tipo | Valor padrão | Descrição |
-  | --------- | ---- | ------------ | --------- |
-  | `api` | `string` | `undefined` | API Key obtída na plataforma |
-  | `secret` | `string` | `undefined` | Secret obtído na plataforma. |
+**Request Params** 
 
+| Param | Type | Default Value | Description |
+| --------- | ---- | ------------ | --------- |
+| `api` | `string` | `undefined` | Your API Public Key. |
+| `secret` | `string` | `undefined` | Your API Private Key. |
+
+
+:::note NOTE:
+The required params for this request must be sent to the ***end-point*** via *headers*.
+:::
 
 ______________
 
 # cURL
 
-Exemplo de **cURL** da solicitação **POST** para gerar uma cobrança utilizando a ***API** da **Bembit**
+This is an example of **cURL** format on a **POST** request used for generating a *charge* using **Bembit's** *API*. 
 ![Bembit API](/img/bembit_api_charge_curl.png "cURL")
 
 **Request BODY:**
 
-- ***Value:*** Valor *float* que representa a moeda local, por exemplo, para **R$100** o *value* = 100, se for **R$1,50** o *value* = 1.5.
-- ***Identifier:*** É um nome qualquer, para você poder identificar facilmente sua transação.
-- ***expiresIn:*** Tempo de expiração, notado em milisegundos ***(1000ms = 1s)***.
-- ***address:*** Endereço da *Wallet* que irá receber os tokens comprados.
-- ***token:*** Simbolo do **token** que esta sendo negociado na operação.
-- ***network:*** *Id* da blockchain que negocia o ***token*** escolhido.
+- ***Value:*** It's a *float* value that represents the local currency, for example, for **R$100** (*Brazilian Reais*) the *value* is 100, for **R$1,50** the *value* is 1.5
+- ***Identifier:*** It's just a **TAG**, to make easier a further identification of the transaction.
+- ***expiresIn:*** Charge's expiration time, required in milliseconds format ***(1000ms = 1s)***.
+- ***address:*** The *Crypto Wallet* address that will receive the bought **Tokens**.
+- ***token:*** **Token's** symbol of what's being negotiated.
+- ***network:*** The Blockchain's *Id* that supports negotiating the chosen ***token***.
 
 ![Bembit API](/img/bembit_api_charge_request.png "Request Body")
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/BemPix/post_client_payments_charges).
+SEE IT IN ACTION!!! in [Swagger](https://api.bembit.com/docs/#/BemPix/post_client_payments_charges).

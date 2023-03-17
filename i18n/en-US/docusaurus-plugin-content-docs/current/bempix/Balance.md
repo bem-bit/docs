@@ -17,7 +17,7 @@ https://api.bembit.com/api/v1/client/balance
 GET
 ```
 
-**Params** 
+**Request Params** 
 
 | Param | Type | Default Value | Description |
 | --------- | ---- | ------------ | --------- |
@@ -45,6 +45,6 @@ This is an example of **cURL** format on a **GET** request used for retrieving t
 ![Bembit API](/img/bembit_api_balance_response.png "Response Body")
 
 
-SEE IT IN ACTION!!! [Swagger](https://api.bembit.com/docs/#/BemPix/get_client_balance).
+SEE IT IN ACTION!!! in [Swagger](https://api.bembit.com/docs/#/BemPix/get_client_balance).
 
 
