@@ -2,48 +2,49 @@
 sidebar_position: 1
 ---
 
-## Solicitando Balance
+## Balance request
 
-Para consultar o saldo é necessário fornecer via ***header*** os parametros requeridos pelo ***end-point.***
+In order to get the user's *Balance* you need to make a request and provide via ***headers*** the required params.
 
-**URL**
+**Full Endpoint URL**
 ```
 https://api.bembit.com/api/v1/client/balance
 ``` 
 
-**Método**
+**Method**
 
 ```
 GET
 ```
 
-**Parametros** 
+**Params** 
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao ***end-point*** via *headers* no momento da solicitação.
-:::
-
-| Parametro | Tipo | Valor padrão | Descrição |
+| Param | Type | Default Value | Description |
 | --------- | ---- | ------------ | --------- |
-| `api` | `string` | `undefined` | API Key obtída na plataforma |
-| `secret` | `string` | `undefined` | Secret obtído na plataforma. |
+| `api` | `string` | `undefined` | Your API Public Key. |
+| `secret` | `string` | `undefined` | Your API Private Key. |
 
+
+:::note NOTE:
+The required params for this request must be sent to the ***end-point*** via *headers*.
+:::
 
 ______________
 
 # cURL
 
-Exemplo de **cURL** da solicitação **GET** para consultar o saldo disponivel de um cliente utilizando a ***API** da **Bembit**
+This is an example of **cURL** format on a **GET** request used for retrieving the available user's balance using **Bembit's** *API*. 
 ![Bembit API](/img/bembit_api_balance_curl.png "cURL")
 
 **Response BODY:**
 
-- ***Currency:*** O simbolo da *criptomoeda* que está sendo referida na consulta.
-- ***Amount:*** O saldo disponivel para realizar transações na plataforma.
-- ***Blocked:*** Valor retido no sistema enquanto é finalizada uma operação.
+- ***Currency:*** Is the symbol of the *cryptocurrency* which balance is being consulted.
+- ***Amount:*** Represents the user's current balance.
+- ***Blocked:*** It's the amount of the balance being temporarily *held* in the platform by a transaction created by the account's owner (client).
+
 ![Bembit API](/img/bembit_api_balance_response.png "Response Body")
 
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/BemPix/get_client_balance).
+SEE IT IN ACTION!!! [Swagger](https://api.bembit.com/docs/#/BemPix/get_client_balance).
 
 
