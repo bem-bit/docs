@@ -7,7 +7,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Documentation ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="Documentação completa para desenvolvedores que precisarem utilizar a API da Bembit."
     >
       <div className="container">
         
