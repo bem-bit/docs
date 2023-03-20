@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.BemPIX": {
+    "message": "BemPIX",
+    "description": "The label for category BemPIX in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Requesting a Quote": {
+    "message": "Requesting a Quote",
+    "description": "The label for category Requesting a Quote in sidebar tutorialSidebar"
+  }
+}

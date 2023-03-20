@@ -1,18 +1,18 @@
 {
-    "title": {
-        "message": "Bembit API Documentation",
-        "description": "Very fast, very easy, Bembit!"
-    },
-    "item.label.Docs": {
-        "message": "Docs",
-        "description": "Very fast, very easy, Bembit!"
-    },
-    "item.label.Blog": {
-        "message": "Blog",
-        "description": "Very fast, very easy, Bembit!"
-    },
-    "item.label.Github": {
-        "message": "Github",
-        "description": "Very fast, very easy, Bembit!"
-    }
+  "title": {
+    "message": "Bembit API Documentation",
+    "description": "The title in the navbar"
+  },
+  "item.label.Guia do usuário": {
+    "message": "User's Guide",
+    "description": "Navbar item with label Guia do usuário"
+  },
+  "item.label.Changelog": {
+    "message": "Changelog",
+    "description": "Navbar item with label Changelog"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
 }
