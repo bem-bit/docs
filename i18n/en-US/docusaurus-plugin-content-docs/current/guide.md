@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+id: guide
+slug: /
 ---
 
 # Wellcome to Bembit
