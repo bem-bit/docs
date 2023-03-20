@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 ---
-## Listado de cobranças
+# Listado de cobranças
 
 Para solicitar um listado das cobranças realizadas é necessário fornecer via ***header*** os parametros requeridos pelo ***end-point.***
 

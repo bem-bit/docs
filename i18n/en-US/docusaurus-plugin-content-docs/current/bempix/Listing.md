@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 ---
-## Charges listing
+# Charges listing
 
 To retrieve a list of charges you need to make a request and provide via ***headers*** the required params.
 

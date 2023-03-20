@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-## SWAP
+# Realizando o SWAP
 
 Para realizar a troca de BRL por um **TOKEN** via **API** é necessario fornecer via **headers** o **API Key** e o **Secret** gerados na sua conta.
 

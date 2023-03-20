@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-## QR Code
+# Gerando um QR Code
 
 Para gera um codigo QR e utilizar na cobrança gerada é necessario fornecer o ***id*** da cobrança para o **end-point**
 

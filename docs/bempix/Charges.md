@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-## Criar cobrança
+# Criando uma cobrança
 
 Faz a solicitação de cobrança e retorna um código **QRCode** com o valor informado para pagamento
 

@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Gerando uma cotação
+# Requesting a Quote
 
 Para gerar uma cotacão é necessário informar o par de moedas para a transação e em qual rede será feita a transação se a cotação for executada.
 

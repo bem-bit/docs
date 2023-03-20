@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-## Solicitando Balance
+# Solicitando Balance
 
 Para consultar o saldo é necessário fornecer via ***header*** os parametros requeridos pelo ***end-point.***
 
