@@ -1,0 +1,18 @@
+{
+    "title": {
+        "message": "Bembit API Documentation",
+        "description": "Very fast, very easy, Bembit!"
+    },
+    "item.label.Docs": {
+        "message": "Docs",
+        "description": "Very fast, very easy, Bembit!"
+    },
+    "item.label.Blog": {
+        "message": "Blog",
+        "description": "Very fast, very easy, Bembit!"
+    },
+    "item.label.Github": {
+        "message": "Github",
+        "description": "Very fast, very easy, Bembit!"
+    }
+}

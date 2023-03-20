@@ -30,6 +30,14 @@ const config = {
   i18n: {
     defaultLocale: 'pt-BR',
     locales: ['pt-BR', 'en-US'],
+    localeConfigs: {
+      'pt-BR': {
+        label: 'Português Brasileiro'
+      },
+      'en-US': {
+        label: 'American English'
+      },
+    }
   },
 
   presets: [
@@ -78,7 +86,7 @@ const config = {
             type: 'doc',
             docId: 'guide',
             position: 'left',
-            label: 'Guia de uso',
+            label: 'Guia do usuário',
           },
           {to: '/blog', label: 'Changelog', position: 'right'},
           {
