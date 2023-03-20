@@ -36,8 +36,8 @@ Exemplo de **cURL** da solicitação **GET** mostrar a simulação de um *SWAP* 
 # Valores de exemplo
 
 - ***amount:*** Valor inicial da troca.
-- ***buy:*** Quantidade de tokens que estão sendo vendidos.
-- ***sell:*** Quantidade de tokens que estão sendo comprados.
+- ***buy:*** Quantidade de tokens que estão sendo comprados.
+- ***sell:*** Quantidade de tokens que estão sendo vendidos.
 - ***currency:*** Moeda inicial da troca.
 ![Bembit API](/img/bembit_api_swap_value_example_values.png "cURL")
 

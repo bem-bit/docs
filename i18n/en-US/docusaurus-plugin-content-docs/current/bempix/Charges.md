@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-## Generating charges
+# Generating charges
 
 Generates a charge and returns a **QR Code** with its value imbued in it.
 

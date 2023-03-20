@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-## QR Code
+# Retrieving a QR Code
 
 In order to retrieve the **QR Code** generated in a charge and use it to complete a transaction, you need to make a request and provide via ***headers*** the required params.
 

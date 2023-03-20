@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-## SWAP
+# Making a SWAP
 
 In order to make a **SWAP** between two **TOKENs**, you need to make a request and provide via ***headers*** the required params.
 

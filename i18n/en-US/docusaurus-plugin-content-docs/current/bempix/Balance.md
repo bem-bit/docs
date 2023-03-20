@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-## Balance request
+# Balance request
 
 In order to get the user's *Balance* you need to make a request and provide via ***headers*** the required params.
 
