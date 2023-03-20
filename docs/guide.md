@@ -27,7 +27,7 @@ https://api-sandbox.bembit.com/api/v1
 
 ### Em caso de dúvidas
 
-Se você tiver qualquer dúvida sobre a Bembit pode consultar a nossa [Central de Ajuda](https://bembit.com/faq) ou entrar em contato com as nossas equipes de Suporte ou Atendimento:
+Caso você tiver qualquer dúvida sobre a Bembit pode consultar a nossa [Central de Ajuda](https://bembit.com/faq) ou entrar em contato com as nossas equipes de Suporte ou Atendimento:
 
 #### Central de Ajuda:
 Nossa Central de Ajuda funciona como um guia completo para que você encontre rapidamente a resposta para as suas dúvidas. Nela, você pode navegar por dúvidas frequentes e explicações sobre várias questões relacionadas ao nosso negócio. Ela pode ser acessada pelo seguinte link: [Fale conosco](https://bembit.com/fale-conosco).
