@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+id: guide
+slug: /
 ---
 
 # Bem-vindo a Bembit
@@ -11,13 +13,11 @@ Nesta documentação você pode explorar todos os produtos e funcionalidades que
 Essa documentação é pública e é referente aos serviços disponíbilizados pela Bembit.
 
 
-
 __Link de produção__
 
 ```
 https://api.bembit.com/api/v1
 ```
-
 
 __Link de teste (sandbox)__
 
