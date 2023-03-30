@@ -33,7 +33,7 @@ ______________
 # cURL
 
 This is an example of **cURL** format on a **GET** request used for retrieving the list of an user's generated charges using **Bembit's** *API*.
-![Bembit API](/img/bembit_api_charge_list_curl.png "cURL")
+![Bembit API](/img/bembit_api_charge_list_curl_enUS.png "cURL")
 
 **Response BODY:**
 
