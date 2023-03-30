@@ -95,7 +95,7 @@ const config = {
         copyright: `© ${new Date().getFullYear()} Bembit, Todos os direitos reservados.`,
       },
       prism: {
-        theme: lightCodeTheme,
+        theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
