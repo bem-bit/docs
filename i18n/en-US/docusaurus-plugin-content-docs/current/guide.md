@@ -4,7 +4,7 @@ id: guide
 slug: /
 ---
 
-# Wellcome to Bembit
+# Welcome to Bembit
 
 Bembit is a technology service that provides what is needed to connect your application to the **Cryptocurrencies** universe.
 
