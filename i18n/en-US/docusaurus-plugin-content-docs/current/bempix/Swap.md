@@ -31,7 +31,7 @@ The required params for this request must be sent to the ***end-point*** via *he
 
 # cURL
 This is an example of **cURL** used in a **POST** request used for swapping two **Tokens** using **Bembit's** *API*.
-![Bembit API](/img/bembit_api_swap_curl.png "cURL")
+![Bembit API](/img/bembit_api_swap_curl_enUs.png "cURL")
 
 - ***network:*** The Blockchain's *Id* that supports negotiating the chosen ***tokens***.
 - ***addressToReceive:*** The *Crypto Wallet* address that will receive the bought **Tokens**.
