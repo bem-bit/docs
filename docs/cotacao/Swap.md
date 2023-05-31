@@ -26,7 +26,7 @@ Os parametros para essa solicitação devem ser passados ao ***end-point*** via 
 
 | Parametro | Tipo | Valor padrão | Descrição |
 | --------- | ---- | ------------ | --------- |
-| `amount` | `string` | `0` | Valor do investimento |
+| `amount` | `string` | `0` | Valor escolhido |
 
 # cURL
 

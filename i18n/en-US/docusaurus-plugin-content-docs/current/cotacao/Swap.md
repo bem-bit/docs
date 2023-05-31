@@ -26,7 +26,7 @@ The required params for this request must be sent to the ***end-point*** via *he
 
 | Params | Type | Default value | Description |
 | --------- | ---- | ------------ | --------- |
-| `amount` | `string` | `0` | Input value |
+| `amount` | `string` | `0` | Choosen value |
 
 # cURL
 
