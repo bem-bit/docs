@@ -12,6 +12,8 @@ In this documentation you can explore all our products and functionalities offer
 
 This is a public documentation that can be used as a reference to all available services on Bembit.
 
+***More information about all our End-points can be found on*** [https://api.bembit.com/docs](https://api.bembit.com/docs)
+
 __Production environment URL__
 
 ```

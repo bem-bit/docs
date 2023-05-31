@@ -12,6 +12,8 @@ Nesta documentação você pode explorar todos os produtos e funcionalidades que
 
 Essa documentação é pública e é referente aos serviços disponíbilizados pela Bembit.
 
+***Todas as APIS listadas nessa documentação podem ser encontradas em*** [https://api.bembit.com/docs](https://api.bembit.com/docs)
+
 
 __Link de produção__
 
