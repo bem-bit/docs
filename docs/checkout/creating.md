@@ -20,7 +20,7 @@ https://api.bembit.com/api/v1/checkouts
 POST
 ```
 
-### **Parametros**
+**Parametros**
 
 :::note Observação
 Os parametros para essa solicitação devem ser passados ao ***end-point*** via *headers*, junto com o ***request body*** no momento da solicitação.
