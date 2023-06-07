@@ -20,7 +20,7 @@ https://api.bembit.com/api/v1/checkouts
 POST
 ```
 
-**Parametros**
+### Parametros
 
 :::note Observação
 Os parametros para essa solicitação devem ser passados ao ***end-point*** via *headers*, junto com o ***request body*** no momento da solicitação.
@@ -32,7 +32,7 @@ Os parametros para essa solicitação devem ser passados ao ***end-point*** via 
 | `secret` | `string` | `undefined` | Secret obtído na plataforma. |
 
 
-## **Request Body:**
+## Request Body:
 ```json
 {
   "slug": "string",
@@ -67,7 +67,7 @@ Os parametros para essa solicitação devem ser passados ao ***end-point*** via 
 - **_paymentMethodCrypto / allTokens:_** É ***true*** caso sejam aceitas *todas* as criptomoedas, caso contrario é ***false***.
 - **_paymentMethodCrypto / highlightTokens:_** É um ***Array de strings*** com os *símbolos* dos **tokens** aceitos.
 
-### ***cURL:***
+### cURL:
 
 ```cURL
 curl -X 'POST' \
@@ -105,5 +105,6 @@ curl -X 'POST' \
 ### Status 403:
 
     Unauthenticated
+    
 
 Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/post_checkouts).
