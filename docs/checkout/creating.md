@@ -2,11 +2,11 @@
 sidebar_position: 3
 ---
 
-# Gerar link
+# Testing
 
-### Criando um link de pagamento
+### Listando todos os pagamentos
 
-Para gerar um novo link de pagamento é necessário realizar uma request do tipo **POST** seguindo os parámetros definidos a continuação:
+Para listar todos os pagamentos é necessário realizar uma request do tipo **GET** passando os parámetros definidos a continuação:
 
 **URL**
 
@@ -17,94 +17,88 @@ https://api.bembit.com/api/v1/checkouts
 **Método**
 
 ```
-POST
+GET
 ```
 
-### Parametros
+**Parametros**
 
 :::note Observação
-Os parametros para essa solicitação devem ser passados ao ***end-point*** via *headers*, junto com o ***request body*** no momento da solicitação.
+Os parametros para essa solicitação devem ser passados ao ***end-point*** via *headers* no momento da solicitação.
 :::
 
-| Parametro | Tipo | Valor padrão | Descrição |
-| --------- | ---- | ------------ | --------- |
-| `api` | `string` | `undefined` | API Key obtída na plataforma |
-| `secret` | `string` | `undefined` | Secret obtído na plataforma. |
+| Parametro | Tipo     | Valor padrão | Descrição                    |
+| --------- | -------- | ------------ | ---------------------------- |
+| `api`     | `string` | `undefined`  | API Key obtída na plataforma |
+| `secret`  | `string` | `undefined`  | Secret obtído na plataforma. |
 
+---
 
-## Request Body:
+# cURL
+
+```cURL
+curl -X 'GET' \
+  'https://api-sandbox.bembit.com/api/v1/checkouts' \
+  -H 'accept: application/json' \
+  -H 'api: [Sua API]' \
+  -H 'secret: [Seu secret]'
+```
+
+**Respostas do Server:**
+
+### Status 200:
+
+_Response Body:_
+
+```json
+[
+  {
+    "title": "string",
+    "description": "string",
+    "slug": "string",
+    "active": true,
+    "paymentMethodPix": {
+      "expiryTimeInMinutes": 0,
+      "enabled": true
+    },
+    "paymentMethodCrypto": {
+      "highlightTokens": [
+        "string"
+      ],
+      "enabled": true,
+      "allTokens": true,
+      "expiryTimeInMinutes": 0
+    },
+    "logo": "string",
+    "createdAt": "2023-06-07T15:58:10.961Z",
+    "updatedAt": "2023-06-07T15:58:10.961Z",
+    "id": "string"
+  }
+]
+```
+
+- **_Title:_** Título ou nome do _Link de pagamento_, definido ao momento da criação.
+- **_Description:_** Descrição do _link / pagamento_.
+- **_Slug:_** Alias do link de pagamento (definido no momento da criação).
+- **_Active:_** Status do _Link de pagamento_ podendo ser **_True_** ou **_False_**.
+- **_paymentMethodPix / expiryTimeInMinutes:_** Tempo de validade em _minutos_ do **QR** gerado para pagamento.
+- **_paymentMethodPix / enabled:_** Status do metodo **PIX**, **_true_** se estiver habilidato ou **_false_** se não.
+- **_paymentMethodCrypto / highlightTokens:_** É um **_Array de strings_** com os _símbolos_ dos **tokens** aceitos.
+- **_paymentMethodCrypto / enabled:_** Define se o pagamento por **_Cryptomoedas_** é aceito.
+- **_paymentMethodCrypto / allTokens:_** É **_true_** caso sejam aceitas _todas_ as criptomoedas, caso contrario é **_false_**.
+- **_paymentMethodCrypto / expiryTimeInMinutes:_** Tempo de validade em _minutos_ do **QR** gerado para pagamento.
+- **_Logo:_** _URL_ da imagem do logo utilizado no link de pagamento.
+- **_CreatedAt:_** Data de criação do link de pagamento.
+- **_UpdatedAt:_** Data de atualização do link de pagamento (caso tenha sido atualizado).
+- **_Id:_** Identificador do link de pagamento.
+
+### Status 401:
+
+_Response Body:_
+
 ```json
 {
-  "slug": "string",
-  "title": "string",
-  "description": "Uma breve descrição",
-  "logo": "string",
-  "paymentMethodPix": {
-    "enabled": true,
-    "expiryTimeInMinutes": 5
-  },
-  "paymentMethodCrypto": {
-    "enabled": true,
-    "expiryTimeInMinutes": 30,
-    "allTokens": true,
-    "highlightTokens": [
-      "string"
-    ]
-  }
+  "error": true
 }
 ```
 
-- **_Slug:_** Alias do link de pagamento, string que identifica seu link de pagamento.
-- **_Title:_** Título ou nome do _Link de pagamento_, definido ao momento da criação.
-- **_Description:_** Descrição do *link / pagamento*.
-- **_Logo:_** *URL* da imagem do logo utilizado no link de pagamento.
-
-- **_paymentMethodPix / enabled:_** Status do metodo **PIX**, ***true*** se estiver habilidato ou ***false*** se não.
-- **_paymentMethodPix / expiryTimeInMinutes:_** Tempo de validade em *minutos* do **QR** gerado para pagamento.
-
-- **_paymentMethodCrypto / enabled:_** Define se o pagamento por ***Cryptomoedas*** é aceito.
-- **_paymentMethodCrypto / expiryTimeInMinutes:_** Tempo de validade em *minutos* do **QR** gerado para pagamento.
-- **_paymentMethodCrypto / allTokens:_** É ***true*** caso sejam aceitas *todas* as criptomoedas, caso contrario é ***false***.
-- **_paymentMethodCrypto / highlightTokens:_** É um ***Array de strings*** com os *símbolos* dos **tokens** aceitos.
-
-### cURL:
-
-```cURL
-curl -X 'POST' \
-  'https://api-sandbox.bembit.com/api/v1/checkouts' \
-  -H 'accept: */*' \
-  -H 'api: [Seu API]' \
-  -H 'secret: [Seu secret]' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "slug": "string",
-  "title": "string",
-  "description": "Uma breve descrição",
-  "logo": "string",
-  "paymentMethodPix": {
-    "enabled": true,
-    "expiryTimeInMinutes": 5
-  },
-  "paymentMethodCrypto": {
-    "enabled": true,
-    "expiryTimeInMinutes": 30,
-    "allTokens": true,
-    "highlightTokens": [
-      "string"
-    ]
-  }
-}'
-```
-
-## Respostas do Server:
-
-### Status 201:
-
-    Created
-
-### Status 403:
-
-    Unauthenticated
-    
-
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/post_checkouts).
+Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/get_checkouts).
