@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Gerar link
 
-### Criando um novo link de pagamento
+### Criando um link de pagamento
 
 Para gerar um novo link de pagamento é necessário realizar uma request do tipo **POST** seguindo os parámetros definidos a continuação:
 
