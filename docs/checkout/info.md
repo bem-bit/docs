@@ -6,12 +6,12 @@ sidebar_position: 1
 
 ### Obtendo dados do link
 
-Para obtener todas as informações relativas a um link de pagamento em especifico, é necessário realizar uma request do tipo **GET** incluindo o _Slug_ do link:
+Para obter todas as informações relativas a um link de pagamento em especifico, é necessário realizar uma request do tipo **GET** incluindo o _Slug_ do link:
 
 **URL**
 
 ```
-https://api.bembit.com/api/v1/checkout/{slug}
+https://api.bembit.com/api/v1/checkouts/{slug}
 ```
 
 **Método**
@@ -74,7 +74,7 @@ _Response Body:_
 - **_Title:_** Título ou nome do _Link de pagamento_, definido ao momento da criação.
 - **_Description:_** Descrição do *link / pagamento*.
 - **_Slug:_** Código gerado automaticamente pelo sistema para identificação do link de pagamento.
-- **_Active:_** Status do _Link de pagamento_ pudendo ser ***True*** ou ***False***.
+- **_Active:_** Status do _Link de pagamento_ podendo ser ***True*** ou ***False***.
 - **_paymentMethodPix / expiryTimeInMinutes:_** Tempo de validade em *minutos* do **QR** gerado para pagamento.
 - **_paymentMethodPix / enabled:_** Status do metodo **PIX**, ***true*** se estiver habilidato ou ***false*** se não.
 - **_paymentMethodCrypto / highlightTokens:_** É um ***Array de strings*** com os *símbolos* dos **tokens** aceitos.
