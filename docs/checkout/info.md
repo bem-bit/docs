@@ -26,9 +26,9 @@ GET
 Os parametros para essa solicitação devem ser passados ao **_end-point_** embutido no final da **URL** da **_request_**.
 :::
 
-| Parametro | Tipo     | Valor padrão | Descrição                                                          |
-| --------- | -------- | ------------ | ------------------------------------------------------------------ |
-| `slug`    | `string` | `undefined`  | Código gerado pelo sistema para identificação do link de pagamento |
+| Parametro | Tipo     | Valor padrão | Descrição                                                   |
+| --------- | -------- | ------------ | ----------------------------------------------------------- |
+| `slug`    | `string` | `undefined`  | Alias do link de pagamento (definido no momento da criação) |
 
 ---
 
@@ -36,13 +36,11 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** embu
 
 ```cURL
 curl -X 'GET' \
-  'https://api.bembit.com/api/v1/checkouts/64807a180c9807b171a911c3' \
+  'https://api.bembit.com/api/v1/checkouts/{slug}' \
   -H 'accept: application/json'
 ```
 
 **Respostas do Server:**
-
-
 
 ### Status 200:
 
@@ -72,16 +70,16 @@ _Response Body:_
 ```
 
 - **_Title:_** Título ou nome do _Link de pagamento_, definido ao momento da criação.
-- **_Description:_** Descrição do *link / pagamento*.
-- **_Slug:_** Código gerado automaticamente pelo sistema para identificação do link de pagamento.
-- **_Active:_** Status do _Link de pagamento_ podendo ser ***True*** ou ***False***.
-- **_paymentMethodPix / expiryTimeInMinutes:_** Tempo de validade em *minutos* do **QR** gerado para pagamento.
-- **_paymentMethodPix / enabled:_** Status do metodo **PIX**, ***true*** se estiver habilidato ou ***false*** se não.
-- **_paymentMethodCrypto / highlightTokens:_** É um ***Array de strings*** com os *símbolos* dos **tokens** aceitos.
-- **_paymentMethodCrypto / enabled:_** Define se o pagamento por ***Cryptomoedas*** é aceito.
-- **_paymentMethodCrypto / allTokens:_** É ***true*** caso sejam aceitas *todas* as criptomoedas, caso contrario é ***false***.
-- **_paymentMethodCrypto / expiryTimeInMinutes:_** Tempo de validade em *minutos* do **QR** gerado para pagamento.
-- **_Logo:_** *URL* da imagem do logo utilizado no link de pagamento.
+- **_Description:_** Descrição do _link / pagamento_.
+- **_Slug:_** Alias do link de pagamento (definido no momento da criação).
+- **_Active:_** Status do _Link de pagamento_ podendo ser **_True_** ou **_False_**.
+- **_paymentMethodPix / expiryTimeInMinutes:_** Tempo de validade em _minutos_ do **QR** gerado para pagamento.
+- **_paymentMethodPix / enabled:_** Status do metodo **PIX**, **_true_** se estiver habilidato ou **_false_** se não.
+- **_paymentMethodCrypto / highlightTokens:_** É um **_Array de strings_** com os _símbolos_ dos **tokens** aceitos.
+- **_paymentMethodCrypto / enabled:_** Define se o pagamento por **_Cryptomoedas_** é aceito.
+- **_paymentMethodCrypto / allTokens:_** É **_true_** caso sejam aceitas _todas_ as criptomoedas, caso contrario é **_false_**.
+- **_paymentMethodCrypto / expiryTimeInMinutes:_** Tempo de validade em _minutos_ do **QR** gerado para pagamento.
+- **_Logo:_** _URL_ da imagem do logo utilizado no link de pagamento.
 - **_CreatedAt:_** Data de criação do link de pagamento.
 - **_UpdatedAt:_** Data de atualização do link de pagamento (caso tenha sido atualizado).
 - **_Id:_** Identificador do link de pagamento.
@@ -97,5 +95,4 @@ _Response Body:_
 }
 ```
 
-
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/BemPix/get_client_balance).
+Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/get_checkouts__slug_).

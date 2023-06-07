@@ -78,7 +78,7 @@ _Response Body:_
 
 - **_Title:_** Título ou nome do _Link de pagamento_, definido ao momento da criação.
 - **_Description:_** Descrição do _link / pagamento_.
-- **_Slug:_** Código gerado automaticamente pelo sistema para identificação do link de pagamento.
+- **_Slug:_** Alias do link de pagamento (definido no momento da criação).
 - **_Active:_** Status do _Link de pagamento_ podendo ser **_True_** ou **_False_**.
 - **_paymentMethodPix / expiryTimeInMinutes:_** Tempo de validade em _minutos_ do **QR** gerado para pagamento.
 - **_paymentMethodPix / enabled:_** Status do metodo **PIX**, **_true_** se estiver habilidato ou **_false_** se não.
@@ -101,4 +101,4 @@ _Response Body:_
 }
 ```
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/BemPix/get_client_balance).
+Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/get_checkouts).
