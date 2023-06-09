@@ -1,17 +1,17 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
-# Ativação
+# Desativação
 
-### Ativando um link de pagamento
+### Desativando um link de pagamento
 
-Para ativar um link de pagamento é necessário realizar uma request do tipo **PATCH** seguindo os parámetros definidos a continuação:
+Para desativar um link de pagamento é necessário realizar uma request do tipo **PATCH** seguindo os parámetros definidos a continuação:
 
 **URL**
 
 ```
-https://api.bembit.com/api/v1/checkouts/{id}/activate
+https://api.bembit.com/api/v1/checkouts/{id}/deactivate
 ```
 
 **Método**
@@ -36,14 +36,13 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 
 ```cURL
 curl -X 'PATCH' \
-  'https://api.bembit.com/api/v1/checkouts/{id}/activate' \
+  'https://api.bembit.com/api/v1/checkouts/{id}/deactivate' \
   -H 'accept: */*' \
   -H 'api: [Seu API]' \
   -H 'secret: [Seu Secret]'
 ```
 
 ## Respostas do Server:
-
 
 ***Response headers (example)***
     
@@ -64,7 +63,7 @@ via: 1.1 vegur
 
 ### Status 200:
 
-    Activated
+    Deactivated
 
 ### Status 403:
 

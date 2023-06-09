@@ -1,36 +1,36 @@
 ---
-sidebar_position: 3
+sidebar_position: 6
 ---
 
-# Gerar link
+# Atualização
 
-### Criando um link de pagamento
+### Atualizando um link de pagamento
 
-Para gerar um novo link de pagamento é necessário realizar uma request do tipo **POST** seguindo os parámetros definidos a continuação:
+Para atualizar um link de pagamento é necessário realizar uma request do tipo **PUT** seguindo os parámetros definidos a continuação:
 
 **URL**
 
 ```
-https://api.bembit.com/api/v1/checkouts
+https://api.bembit.com/api/v1/checkouts/{id}
 ```
 
 **Método**
 
 ```
-POST
+PUT
 ```
 
 ### Parametros
 
+| Parametro | Tipo     | Valor padrão | Descrição                                         |
+| --------- | -------- | ------------ | ------------------------------------------------- |
+| `api`     | `string` | `undefined`  | API Key obtída na plataforma                      |
+| `secret`  | `string` | `undefined`  | Secret obtído na plataforma.                      |
+| `id`      | `string` | `undefined`  | String identificador do link gerado pelo sistema. |
+
 :::note Observação
-Os parametros para essa solicitação devem ser passados ao ***end-point*** via *headers*, junto com o ***request body*** no momento da solicitação.
+Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_, assim como o **_id_** deve ser **incluso no url** no momento da solicitação.
 :::
-
-| Parametro | Tipo | Valor padrão | Descrição |
-| --------- | ---- | ------------ | --------- |
-| `api` | `string` | `undefined` | API Key obtída na plataforma |
-| `secret` | `string` | `undefined` | Secret obtído na plataforma. |
-
 
 ## Request Body:
 ```json
@@ -70,11 +70,11 @@ Os parametros para essa solicitação devem ser passados ao ***end-point*** via 
 ### cURL:
 
 ```c
-curl -X 'POST' \
-  'https://api-sandbox.bembit.com/api/v1/checkouts' \
+curl -X 'PUT' \
+  'https://api.bembit.com/api/v1/checkouts/648079c90c9807b171a911a2' \
   -H 'accept: */*' \
-  -H 'api: [Seu API]' \
-  -H 'secret: [Seu secret]' \
+  -H 'api: W5aKGFAvOg' \
+  -H 'secret: z48tFBYGi6yJEgfVWwpo7bFcNueV6TqF' \
   -H 'Content-Type: application/json' \
   -d '{
   "slug": "string",
@@ -96,15 +96,9 @@ curl -X 'POST' \
 }'
 ```
 
-## Respostas do Server:
 
-### Status 201:
+Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/put_checkouts__id_).
 
-    Created
 
-### Status 403:
 
-    Unauthenticated
-    
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/post_checkouts).
