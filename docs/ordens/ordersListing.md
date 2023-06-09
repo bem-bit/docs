@@ -76,10 +76,6 @@ _Response Example value:_
 - **_discount/fixed:_** Valor fixo de desconto, caso houver.
 - **_discount/percentage:_** Percentage de desconto, caso houver.
 
-:::note Importante!
-O Valor do **Dolar** é representado com a stablecoin *BUSD* caso estiver trabalhando com a **BSC**, ou com **USDC** se estiver trabalhando com a *Polygon*.
-:::
-
 ### Status 403:
 
     Unauthorized
