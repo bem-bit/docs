@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Listado de ordens
+# Listagem de ordens
 
 ### Obtendo um listado com todas as ordens
 

@@ -23,12 +23,12 @@ GET
 **Parametros**
 
 :::note Observação
-Para essa solicitação, o *id* da ordem que esta sendo consultada deve estar incluso na ***URL*** da *request*.
+Para essa solicitação, o _id_ da ordem que esta sendo consultada deve estar incluso na **_URL_** da _request_.
 :::
 
-| Parametro | Tipo     | Valor padrão | Descrição                    |
-| --------- | -------- | ------------ | ---------------------------- |
-| `id`      | `string` | `undefined`  | Secret obtído na plataforma. |
+| Parametro | Tipo     | Valor padrão | Descrição    |
+| --------- | -------- | ------------ | ------------ |
+| `id`      | `string` | `undefined`  | Id da ordem. |
 
 # cURL
 
