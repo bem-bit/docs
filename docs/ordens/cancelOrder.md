@@ -28,8 +28,8 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 
 | Parametro | Tipo     | Valor padrão | Descrição                    |
 | --------- | -------- | ------------ | ---------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtída na plataforma |
-| `secret`  | `string` | `undefined`  | Secret obtído na plataforma. |
+| `api`     | `string` | `undefined`  | API Key obtida na plataforma |
+| `secret`  | `string` | `undefined`  | Secret obtido na plataforma. |
 | `id`      | `string` | `undefined`  | Id da ordem.                 |
 
 ### cURL:
