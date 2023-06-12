@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Link de pagamento.
+# Link de pagamento
 
 ### Criando um pedido pelo link de pagamento.
 
