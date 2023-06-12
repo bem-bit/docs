@@ -71,7 +71,7 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'POST' \
   'https://api-sandbox.bembit.com/api/v1/checkouts' \
   -H 'accept: */*' \
-  -H 'api: [Seu API]' \
+  -H 'api: [Sua API]' \
   -H 'secret: [Seu secret]' \
   -H 'Content-Type: application/json' \
   -d '{

@@ -19,7 +19,7 @@ GET
 
 # cURL
 
-Exemplo de **cURL** da solicitação do tipo **GET** para obter um listado de tokens suportados numa **blockchain** especifica, gerada utilizando a ***API** da **Bembit**.
+Exemplo de **cURL** da solicitação do tipo **GET** Para obter uma lista de tokens suportados numa **blockchain** especifica, gerada utilizando a ***API** da **Bembit**.
 ![Bembit API](/img/bembit_api_tokens_by_network_curl.png "cURL")
 
 # Valores de exemplo

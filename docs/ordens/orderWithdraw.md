@@ -39,7 +39,7 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'POST' \
   'https://api.bembit.com/api/v1/orders/withdraw' \
   -H 'accept: */*' \
-  -H 'api: [Seu API]' \
+  -H 'api: [Sua API]' \
   -H 'secret: [Seu Secret]' \
   -H 'Content-Type: application/json' \
   -d '{

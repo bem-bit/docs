@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ### Obtendo um listado com todas as ordens
 
-Para obter um listado com todas as ordens criadas na sua conta, é necessário realizar uma request do tipo **GET** seguindo os parámetros a continuação:
+Para obter uma lista com todas as ordens criadas na sua conta, é necessário realizar uma request do tipo **GET** seguindo os parámetros a continuação:
 
 **URL**
 
@@ -37,7 +37,7 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'GET' \
   'https://api.bembit.com/api/v1/orders' \
   -H 'accept: application/json' \
-  -H 'api: [Seu API]' \
+  -H 'api: [Sua API]' \
   -H 'secret: [Seu Secret]'
 ```
 ---

@@ -6,7 +6,7 @@ sidebar_position: 7
 
 ### Obtendo informações do pedido feito pelo link de pagamento.
 
-Para cancelar uma _ordem_ na plataforma via **_API_**, é necessário realizar uma request do tipo **GET** com a seguinte configuração:
+Para consultas as informações de um pedido atrelado ao seu link de pagamento na plataforma via **_API_**, é necessário realizar uma request do tipo **GET** com a seguinte configuração:
 
 **URL**
 

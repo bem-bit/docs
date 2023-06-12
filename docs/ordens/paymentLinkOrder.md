@@ -6,7 +6,7 @@ sidebar_position: 6
 
 ### Criando um pedido pelo link de pagamento.
 
-Para cancelar uma _ordem_ na plataforma via **_API_**, é necessário realizar uma request do tipo **POST** com a seguinte configuração:
+Para gerar um pedido atrelado ao seu link de pagamento na plataforma via **_API_**, é necessário realizar uma request do tipo **POST** com a seguinte configuração:
 
 **URL**
 

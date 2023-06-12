@@ -73,7 +73,7 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'PUT' \
   'https://api.bembit.com/api/v1/checkouts/648079c90c9807b171a911a2' \
   -H 'accept: */*' \
-  -H 'api: [Seu Api]' \
+  -H 'api: [Sua API]' \
   -H 'secret: [Seu Secret]' \
   -H 'Content-Type: application/json' \
   -d '{

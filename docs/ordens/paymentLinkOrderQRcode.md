@@ -6,7 +6,7 @@ sidebar_position: 8
 
 ### Obtendo o QR Code do pedido.
 
-Para cancelar uma _ordem_ na plataforma via **_API_**, é necessário realizar uma request do tipo **GET** com a seguinte configuração:
+Para obter a imagem do QR code de um pedido atrelado ao seu link de pagamento é necessário realizar uma request do tipo **GET** com a seguinte configuração:
 
 **URL**
 

@@ -38,7 +38,7 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'GET' \
   'https://api.bembit.com/api/v1/orders/{id}' \
   -H 'accept: */*' \
-  -H 'api: [Seu API]' \
+  -H 'api: [Sua API]' \
   -H 'secret: [Seu secret]'
 ```
 

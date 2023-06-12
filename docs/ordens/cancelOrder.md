@@ -38,7 +38,7 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'DELETE' \
   'https://api-sandbox.bembit.com/api/v1/orders/{id}/cancel' \
   -H 'accept: */*' \
-  -H 'api: [Seu API]' \
+  -H 'api: [Sua API]' \
   -H 'secret: [Seu secret]'
 ```
 
