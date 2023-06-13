@@ -1,3 +1,3 @@
-# Link de Pagamento
+# Links de Pagamento
 
 A solução da **Bembit** que permite aos usuários criar páginas de cobrança personalizadas para seus clientes. Essas páginas possibilitam o recebimento de pagamentos de forma conveniente, utilizando métodos como *PIX* e *criptomoedas*. Além disso, a interface é completamente personalizável, permitindo que cada usuário aplique seu próprio estilo e identidade visual às páginas de cobrança. 

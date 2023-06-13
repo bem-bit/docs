@@ -2,16 +2,16 @@
 sidebar_position: 3
 ---
 
-# Available Token listing
+## Listado dos Tokens
 
-Retrieves a list with all available **Tokens** for the specified **Network**
+Traz uma lista de tokens disponíveis para trade através da rede fornecendo o nome da rede.
 
-**Full Endpoint URL**
+**URL**
 ```
 https://api.bembit.com/api/v1/integrations/quotation/tokens/{network}
 ``` 
 
-**Method**
+**Método**
 
 ```
 GET
@@ -19,17 +19,15 @@ GET
 
 # cURL
 
-This is an example of **cURL** used in a **GET** request used for retrieving a list of **Tokens** by providing the **Blockchain's ID** and using **Bembit's** *API*.
-
+Exemplo de **cURL** da solicitação do tipo **GET** Para obter uma lista de tokens suportados numa **blockchain** especifica, gerada utilizando a ***API** da **Bembit**.
 ![Bembit API](/img/bembit_api_tokens_by_network_curl.png "cURL")
 
-- ***ID:*** Blockchain **ID** that identifies the network to be queried.
+# Valores de exemplo
 
-## Sample Values (response)
-
-- ***symbol:*** **Token** symbol.
-- ***name:*** **Token** name.
-- ***address:*** **Smart Contract's** address of the listed **Token**.
+- ***symbol:*** Simbolo do **Token** de cotação na operação.
+- ***name:*** Nome do **Token**.
+- ***address:*** Address do **Smart Contract** do **Token** listado.
 ![Bembit API](/img/bembit_api_tokens_by_network_example_values.png "cURL")
 
-SEE IT IN ACTION!!! in [Swagger](https://api.bembit.com/docs/#/Quotation/get_quotation_tokens__network_).
+
+Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Quotation/get_quotation_tokens__network_).

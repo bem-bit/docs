@@ -2,43 +2,43 @@
 sidebar_position: 4
 ---
 
-# SWAP Simulation
+# Simulação de SWAP
 
-In order to simulate a ***SWAP*** you need to make a **GET** request to this *Endpoint* following this pattern:
+Para receber uma lista com as redes disponiveis é necessário realizar uma solicitação do tipo **GET** ao ***end-point*** seguindo a seguinte estrutura.
 
-**Full Endpoint URL**
+**URL**
 ```
 https://api.bembit.com/api/v1/integrations/quotation/book/{amount}
 ``` 
 
-**Method**
+**Método**
 
 ```
 GET
 ```
 
-**Request Params** 
+**Parametros** 
 
-:::note NOTE:
-The required params for this request must be sent to the ***end-point*** via *headers*.
+:::note Observação
+Os parametros para essa solicitação devem ser passados ao ***end-point*** via *path* no momento da solicitação.
 :::
 
 
-| Params | Type | Default value | Description |
+| Parametro | Tipo | Valor padrão | Descrição |
 | --------- | ---- | ------------ | --------- |
-| `amount` | `string` | `0` | Choosen value |
+| `amount` | `string` | `0` | Valor escolhido |
 
 # cURL
 
-This is an example of **cURL** format on a **GET** request used for simulating a *SWAP* using **Bembit's** *API*.
+Exemplo de **cURL** da solicitação **GET** mostrar a simulação de um *SWAP* entre dois **Tokens** utilizando a ***API** da **Bembit**.
 ![Bembit API](/img/bembit_api_swap_value_curl.png "cURL")
 
-## Sample Values (response)
+# Valores de exemplo
 
-- ***amount:*** Input currency value.
-- ***buy:*** **Tokens** being bought.
-- ***sell:*** **Tokens** being sold.
-- ***currency:*** Base currency.
+- ***amount:*** Valor inicial da troca.
+- ***buy:*** Quantidade de tokens que estão sendo comprados.
+- ***sell:*** Quantidade de tokens que estão sendo vendidos.
+- ***currency:*** Moeda inicial da troca.
 ![Bembit API](/img/bembit_api_swap_value_example_values.png "cURL")
 
-SEE IT IN ACTION!!! in [Swagger](https://api.bembit.com/docs/#/Quotation/get_quotation_book__amount_).
+Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Quotation/get_quotation_book__amount_).
