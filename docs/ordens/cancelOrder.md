@@ -8,6 +8,10 @@ sidebar_position: 5
 
 Para cancelar uma _ordem_ na plataforma via **_API_**, é necessário realizar uma request do tipo **DELETE** com a seguinte configuração:
 
+:::caution Atencão
+Se a ordem foi criada, e não se encontra em processamento, ela pode ser cancelada.
+:::
+
 **URL**
 
 ```
