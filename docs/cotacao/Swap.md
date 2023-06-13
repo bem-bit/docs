@@ -1,14 +1,14 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
-# Simulação de SWAP
+# Cotação da troca (USD)
 
-Para receber uma lista com as redes disponiveis é necessário realizar uma solicitação do tipo **GET** ao ***end-point*** seguindo a seguinte estrutura.
+Devolve o valor atual do **Dolar** respeito ao **Real Brasileiro**, representado com a *stablecoin* ***USDT***.
 
 **URL**
 ```
-https://api.bembit.com/api/v1/integrations/quotation/book/{amount}
+https://api.bembit.com/api/v1/quotation/book/{valor}
 ``` 
 
 **Método**
@@ -23,22 +23,30 @@ GET
 Os parametros para essa solicitação devem ser passados ao ***end-point*** via *path* no momento da solicitação.
 :::
 
-
 | Parametro | Tipo | Valor padrão | Descrição |
 | --------- | ---- | ------------ | --------- |
-| `amount` | `string` | `0` | Valor escolhido |
+| `amount` | `number` | `0` | Valor escolhido |
 
-# cURL
+### cURL
 
-Exemplo de **cURL** da solicitação **GET** mostrar a simulação de um *SWAP* entre dois **Tokens** utilizando a ***API** da **Bembit**.
-![Bembit API](/img/bembit_api_swap_value_curl.png "cURL")
+```c
+curl -X 'GET' \
+  'https://api.bembit.com/api/v1/quotation/book/{valor}' \
+  -H 'accept: application/json'
+```
+### Response Body
 
-# Valores de exemplo
-
+```c
+{
+  "amount": 1,
+  "buy": 5.071668,
+  "sell": 5.0706299999999995,
+  "currency": "BRL"
+}
+```
 - ***amount:*** Valor inicial da troca.
 - ***buy:*** Quantidade de tokens que estão sendo comprados.
 - ***sell:*** Quantidade de tokens que estão sendo vendidos.
 - ***currency:*** Moeda inicial da troca.
-![Bembit API](/img/bembit_api_swap_value_example_values.png "cURL")
 
 Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Quotation/get_quotation_book__amount_).
