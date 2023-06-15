@@ -2,11 +2,11 @@
 sidebar_position: 5
 ---
 
-# Desativação
+# Deactivation
 
-### Desativando um link de pagamento
+### Deactivating a payment link
 
-Para desativar um link de pagamento é necessário realizar uma request do tipo **PATCH** seguindo os parámetros definidos a continuação:
+To deactivate a _payment link_, it is necessary to make a **PATCH** request following the defined *parameters* below:
 
 **URL**
 
@@ -14,23 +14,23 @@ Para desativar um link de pagamento é necessário realizar uma request do tipo 
 https://api.bembit.com/api/v1/checkouts/{id}/deactivate
 ```
 
-**Método**
+**Method**
 
 ```
 PATCH
 ```
 
-### Parametros
+### Params
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_, assim como o **_id_** deve ser **incluso no url** no momento da solicitação.
+:::note Important
+The parameters for this request should be passed to the endpoint via _headers_, and the **ID** must be included in the **URL** at the time of the request.
 :::
 
-| Parametro | Tipo     | Valor padrão | Descrição                                         |
-| --------- | -------- | ------------ | ------------------------------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtída na plataforma                      |
-| `secret`  | `string` | `undefined`  | Secret obtído na plataforma.                      |
-| `id`      | `string` | `undefined`  | String identificador do link gerado pelo sistema. |
+| Params   | Type     | Default values | Description          |
+| -------- | -------- | -------------- | -------------------- |
+| `api`    | `string` | `undefined`    | Your _API Key_.      |
+| `secret` | `string` | `undefined`    | Your _Secret_.       |
+| `id`     | `string` | `undefined`    | Payment's link _ID_. |
 
 ### cURL:
 
@@ -38,14 +38,14 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'PATCH' \
   'https://api.bembit.com/api/v1/checkouts/{id}/deactivate' \
   -H 'accept: */*' \
-  -H 'api: [Sua API]' \
-  -H 'secret: [Seu Secret]'
+  -H 'api: [Your API]' \
+  -H 'secret: [Your Secret]'
 ```
 
-## Respostas do Server:
+## Server Responses:
 
-***Response headers (example)***
-    
+**_Response headers (example)_**
+
 ```text
 access-control-allow-origin: *
 alt-svc: h3=":443"; ma=86400
@@ -73,5 +73,4 @@ via: 1.1 vegur
 
     Not found
 
-
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/patch_checkouts__id__activate).
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Checkouts/patch_checkouts__id__activate).
