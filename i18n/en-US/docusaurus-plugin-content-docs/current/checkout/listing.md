@@ -26,10 +26,10 @@ GET
 The parameters for this request should be passed to the end-point via _headers_ at the time of the request.
 :::
 
-| Params | Tipo     | Valor padrão | Descrição                    |
-| --------- | -------- | ------------ | ---------------------------- |
-| `api`     | `string` | `undefined`  | Your _API Key_. |
-| `secret`  | `string` | `undefined`  | Your _secret_. |
+| Params   | Type     | Default values | Description     |
+| -------- | -------- | -------------- | --------------- |
+| `api`    | `string` | `undefined`    | Your _API Key_. |
+| `secret` | `string` | `undefined`    | Your _secret_.  |
 
 ---
 
@@ -61,9 +61,7 @@ _Response Body:_
       "enabled": true
     },
     "paymentMethodCrypto": {
-      "highlightTokens": [
-        "string"
-      ],
+      "highlightTokens": ["string"],
       "enabled": true,
       "allTokens": true,
       "expiryTimeInMinutes": 0
@@ -75,7 +73,6 @@ _Response Body:_
   }
 ]
 ```
-
 
 - **_Title:_** It's _Checkout's_ title, defined when the link is first created.
 - **_Description:_** Payment description.

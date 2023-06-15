@@ -2,11 +2,11 @@
 sidebar_position: 3
 ---
 
-# Gerar link
+# Payment's link creation
 
-### Criando um link de pagamento
+### Generating a new payment link for your request.
 
-Para gerar um novo link de pagamento é necessário realizar uma request do tipo **POST** seguindo os parámetros definidos a continuação:
+To generate a new payment link, you need to make a _POST_ request with the following parameters:
 
 **URL**
 
@@ -14,22 +14,22 @@ Para gerar um novo link de pagamento é necessário realizar uma request do tipo
 https://api.bembit.com/api/v1/checkouts
 ```
 
-**Método**
+**Method**
 
 ```
 POST
 ```
 
-### Parametros
+### Params
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_, junto com o **_request body_** no momento da solicitação.
+:::note Important
+To generate a new payment link, you need to send a **POST** request to the designated end-point. The required parameters for this request should be included in the request headers, while the additional data should be included in the request body.
 :::
 
-| Parametro | Tipo     | Valor padrão | Descrição                    |
-| --------- | -------- | ------------ | ---------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtída na plataforma |
-| `secret`  | `string` | `undefined`  | Secret obtído na plataforma. |
+| Params   | Type     | Default values | Description     |
+| -------- | -------- | -------------- | --------------- |
+| `api`    | `string` | `undefined`    | Your _API Key_. |
+| `secret` | `string` | `undefined`    | Your _secret_.  |
 
 ## Request Body:
 
@@ -37,7 +37,7 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 {
   "slug": "string",
   "title": "string",
-  "description": "Uma breve descrição",
+  "description": "short description",
   "logo": "string",
   "paymentMethodPix": {
     "enabled": true,
@@ -52,18 +52,18 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 }
 ```
 
-- **_Slug:_** Alias do link de pagamento, string que identifica seu link de pagamento.
-- **_Title:_** Título ou nome do _Link de pagamento_, definido ao momento da criação.
-- **_Description:_** Descrição do _link / pagamento_.
-- **_Logo:_** _URL_ da imagem do logo utilizado no link de pagamento.
+- **_Slug:_** Payment's alias (defined when the link is first created).
+- **_Title:_** It's _Checkout's_ title, defined when the link is first created.
+- **_Description:_** Payment description.
+- **_Logo:_** The **_URL_** of the _payment's logo_ image.
 
-- **_paymentMethodPix / enabled:_** Status do metodo **PIX**, **_true_** se estiver habilidato ou **_false_** se não.
-- **_paymentMethodPix / expiryTimeInMinutes:_** Tempo de validade em _minutos_ do **QR** gerado para pagamento.
+- **_paymentMethodPix / enabled:_** Indicate the instances in which the **PIX** payment method is accessible for the ongoing payment process.
+- **_paymentMethodPix / expiryTimeInMinutes:_** Time in _minutes_ for the **QR Code's** lifetime.
 
-- **_paymentMethodCrypto / enabled:_** Define se o pagamento por **_Cryptomoedas_** é aceito.
-- **_paymentMethodCrypto / expiryTimeInMinutes:_** Tempo de validade em _minutos_ do **QR** gerado para pagamento.
-- **_paymentMethodCrypto / allTokens:_** É **_true_** caso sejam aceitas _todas_ as criptomoedas, caso contrario é **_false_**.
-- **_paymentMethodCrypto / highlightTokens:_** É um **_Array de strings_** com os _símbolos_ dos **tokens** aceitos.
+- **_paymentMethodCrypto / enabled:_** Indicate the instances in which the **Crypto** payment method is accessible for the ongoing payment process.
+- **_paymentMethodCrypto / expiryTimeInMinutes:_** Time in _minutes_ for the current's **payment** lifetime.
+- **_paymentMethodCrypto / allTokens:_** It will appear as **true** when all cryptocurrencies are accepted on the current payment.
+- **_paymentMethodCrypto / highlightTokens:_** It's an **_Array of strings_** that contains all the symbols from the accepted cryptocurrencies for the ongoing payment.
 
 ### cURL:
 
@@ -71,13 +71,13 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'POST' \
   'https://api-sandbox.bembit.com/api/v1/checkouts' \
   -H 'accept: */*' \
-  -H 'api: [Sua API]' \
-  -H 'secret: [Seu secret]' \
+  -H 'api: [API]' \
+  -H 'secret: [Secret]' \
   -H 'Content-Type: application/json' \
   -d '{
   "slug": "string",
   "title": "string",
-  "description": "Uma breve descrição",
+  "description": "Short description",
   "logo": "string",
   "paymentMethodPix": {
     "enabled": true,
@@ -104,4 +104,4 @@ curl -X 'POST' \
 
     Unauthenticated
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/post_checkouts).
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Checkouts/post_checkouts).
