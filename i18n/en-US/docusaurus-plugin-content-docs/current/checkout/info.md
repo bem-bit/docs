@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ### Retrieving payment info
 
-In order to get detailed informations about a particular payment you need to send a **GET** request with the _slug_ of the payment on it:
+In order to get detailed information about a particular payment you need to send a **GET** request with the _slug_ of the payment on it:
 
 **URL**
 
@@ -26,9 +26,9 @@ GET
 Params for this request must be included on the **URL**.
 :::
 
-| Parametro | Tipo     | Valor padrão | Descrição                                                   |
-| --------- | -------- | ------------ | ----------------------------------------------------------- |
-| `slug`    | `string` | `undefined`  | Alias do link de pagamento (definido no momento da criação) |
+| ParamS | Type     | Default values | Description                                                  |
+| ------ | -------- | -------------- | ------------------------------------------------------------ |
+| `slug` | `string` | `undefined`    | Checkout link alias (Defined when the link is created). |
 
 ---
 
@@ -40,7 +40,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 
-**Respostas do Server:**
+## Server Responses:
 
 ### Status 200:
 
@@ -69,20 +69,20 @@ _Response Body:_
 }
 ```
 
-- **_Title:_** Título ou nome do _Link de pagamento_, definido ao momento da criação.
-- **_Description:_** Descrição do _link / pagamento_.
-- **_Slug:_** Alias do link de pagamento (definido no momento da criação).
-- **_Active:_** Status do _Link de pagamento_ podendo ser **_True_** ou **_False_**.
-- **_paymentMethodPix / expiryTimeInMinutes:_** Tempo de validade em _minutos_ do **QR** gerado para pagamento.
-- **_paymentMethodPix / enabled:_** Status do metodo **PIX**, **_true_** se estiver habilidato ou **_false_** se não.
-- **_paymentMethodCrypto / highlightTokens:_** É um **_Array de strings_** com os _símbolos_ dos **tokens** aceitos.
-- **_paymentMethodCrypto / enabled:_** Define se o pagamento por **_Cryptomoedas_** é aceito.
-- **_paymentMethodCrypto / allTokens:_** É **_true_** caso sejam aceitas _todas_ as criptomoedas, caso contrario é **_false_**.
-- **_paymentMethodCrypto / expiryTimeInMinutes:_** Tempo de validade em _minutos_ do **QR** gerado para pagamento.
-- **_Logo:_** _URL_ da imagem do logo utilizado no link de pagamento.
-- **_CreatedAt:_** Data de criação do link de pagamento.
-- **_UpdatedAt:_** Data de atualização do link de pagamento (caso tenha sido atualizado).
-- **_Id:_** Identificador do link de pagamento.
+- **_Title:_** It's _Checkout's_ title, defined when the link is first created.
+- **_Description:_** Payment description.
+- **_Slug:_** Payment's alias (defined when the link is first created).
+- **_Active:_** _Checkout's link_ status.
+- **_paymentMethodPix / expiryTimeInMinutes:_** Time in _minutes_ for the **QR Code's** lifetime.
+- **_paymentMethodPix / enabled:_** Indicate the instances in which the **PIX** payment method is accessible for the ongoing payment process.
+- **_paymentMethodCrypto / highlightTokens:_** It's an **_Array of strings_** that contains all the symbols from the accepted cryptocurrencies for the ongoing payment.
+- **_paymentMethodCrypto / enabled:_** Indicate the instances in which the **Crypto** payment method is accessible for the ongoing payment process.
+- **_paymentMethodCrypto / allTokens:_** It will appear as **true** when all cryptocurrencies are accepted on the current payment.
+- **_paymentMethodCrypto / expiryTimeInMinutes:_** Time in _minutes_ for the current's **payment** lifetime.
+- **_Logo:_** The **_URL_** of the _payment's logo_ image.
+- **_CreatedAt:_** Payment creation date.
+- **_UpdatedAt:_** Payment update date.
+- **_Id:_** The ongoing payment ID.
 
 ### Status 404:
 
@@ -91,7 +91,7 @@ _Response Body:_
 ```json
 {
   "httpCode": 404,
-  "description": "Checkout não encontrado."
+  "description": "Checkout not found."
 }
 ```
 
