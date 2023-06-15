@@ -2,11 +2,11 @@
 sidebar_position: 1
 ---
 
-# Informações
+# Info
 
-### Obtendo dados do link
+### Retrieving payment info
 
-Para obter todas as informações relativas a um link de pagamento em especifico, é necessário realizar uma request do tipo **GET** incluindo o _Slug_ do link:
+In order to get detailed informations about a particular payment you need to send a **GET** request with the _slug_ of the payment on it:
 
 **URL**
 
@@ -14,16 +14,16 @@ Para obter todas as informações relativas a um link de pagamento em especifico
 https://api.bembit.com/api/v1/checkouts/{slug}
 ```
 
-**Método**
+**Method**
 
 ```
 GET
 ```
 
-**Parametros**
+**Params**
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** embutido no final da **URL** da **_request_**.
+:::note Important
+Params for this request must be included on the **URL**.
 :::
 
 | Parametro | Tipo     | Valor padrão | Descrição                                                   |
