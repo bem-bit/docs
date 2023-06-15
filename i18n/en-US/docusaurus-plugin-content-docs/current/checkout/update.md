@@ -2,11 +2,11 @@
 sidebar_position: 6
 ---
 
-# Atualização
+# Update
 
-### Atualizando um link de pagamento
+### Updating a payment link.
 
-Para atualizar um link de pagamento é necessário realizar uma request do tipo **PUT** seguindo os parámetros definidos a continuação:
+To update a *payment link*, you need to make a **PUT** request with the following *parameters*:
 
 **URL**
 
@@ -14,22 +14,20 @@ Para atualizar um link de pagamento é necessário realizar uma request do tipo 
 https://api.bembit.com/api/v1/checkouts/{id}
 ```
 
-**Método**
+**Method**
 
 ```
 PUT
 ```
 
-### Parametros
+| Params   | Type     | Default values | Description          |
+| -------- | -------- | -------------- | -------------------- |
+| `api`    | `string` | `undefined`    | Your _API Key_.      |
+| `secret` | `string` | `undefined`    | Your _Secret_.       |
+| `id`     | `string` | `undefined`    | Payment's link _ID_. |
 
-| Parametro | Tipo     | Valor padrão | Descrição                                         |
-| --------- | -------- | ------------ | ------------------------------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtída na plataforma                      |
-| `secret`  | `string` | `undefined`  | Secret obtído na plataforma.                      |
-| `id`      | `string` | `undefined`  | String identificador do link gerado pelo sistema. |
-
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_, assim como o **_id_** deve ser **incluso no url** no momento da solicitação.
+:::note Important
+The parameters for this request should be passed to the endpoint via _headers_, and the **ID** must be included in the **URL** at the time of the request.
 :::
 
 ## Request Body:
@@ -37,7 +35,7 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 {
   "slug": "string",
   "title": "string",
-  "description": "Uma breve descrição",
+  "description": "short description",
   "logo": "string",
   "paymentMethodPix": {
     "enabled": true,
@@ -53,19 +51,29 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
   }
 }
 ```
+<br />
 
-- **_Slug:_** Alias do link de pagamento, string que identifica seu link de pagamento.
-- **_Title:_** Título ou nome do _Link de pagamento_, definido ao momento da criação.
-- **_Description:_** Descrição do *link / pagamento*.
-- **_Logo:_** *URL* da imagem do logo utilizado no link de pagamento.
+- **Slug**: Alias of the payment link, a string that identifies your payment link.
 
-- **_paymentMethodPix / enabled:_** Status do metodo **PIX**, ***true*** se estiver habilidato ou ***false*** se não.
-- **_paymentMethodPix / expiryTimeInMinutes:_** Tempo de validade em *minutos* do **QR** gerado para pagamento.
+- **Title**: Title or name of the payment link, defined at the time of creation.
 
-- **_paymentMethodCrypto / enabled:_** Define se o pagamento por ***Cryptomoedas*** é aceito.
-- **_paymentMethodCrypto / expiryTimeInMinutes:_** Tempo de validade em *minutos* do **QR** gerado para pagamento.
-- **_paymentMethodCrypto / allTokens:_** É ***true*** caso sejam aceitas *todas* as criptomoedas, caso contrario é ***false***.
-- **_paymentMethodCrypto / highlightTokens:_** É um ***Array de strings*** com os *símbolos* dos **tokens** aceitos.
+- **Description**: Description of the link/payment.
+
+- **Logo**: URL of the image of the logo used in the payment link.
+
+- **paymentMethodPix** / *enabled*: Status of the PIX payment method, true if enabled or false if not.
+
+- **paymentMethodPix** / *expiryTimeInMinutes*: Expiry time in minutes for the generated QR code for payment.
+
+- **paymentMethodCrypto** / *enabled*: Defines whether cryptocurrency payment is accepted.
+
+- **paymentMethodCrypto** / *expiryTimeInMinutes*: Expiry time in minutes for the generated QR code for payment.
+
+- **paymentMethodCrypto** / *allTokens*: true if all cryptocurrencies are accepted, otherwise false.
+
+- **paymentMethodCrypto** / *highlightTokens*: An array of strings containing the symbols of the accepted tokens.
+
+<br />
 
 ### cURL:
 
@@ -73,13 +81,13 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'PUT' \
   'https://api.bembit.com/api/v1/checkouts/648079c90c9807b171a911a2' \
   -H 'accept: */*' \
-  -H 'api: [Sua API]' \
-  -H 'secret: [Seu Secret]' \
+  -H 'api: [Your API]' \
+  -H 'secret: [Your Secret]' \
   -H 'Content-Type: application/json' \
   -d '{
   "slug": "string",
   "title": "string",
-  "description": "Uma breve descrição",
+  "description": "short description",
   "logo": "string",
   "paymentMethodPix": {
     "enabled": true,
@@ -96,9 +104,5 @@ curl -X 'PUT' \
 }'
 ```
 
-
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/put_checkouts__id_).
-
-
-
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Checkouts/put_checkouts__id_).
 

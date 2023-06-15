@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Payment's link creation
+# Payment creation
 
 ### Generating a new payment link for your request.
 
