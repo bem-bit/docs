@@ -26,7 +26,7 @@ GET
 Params for this request must be included on the **URL**.
 :::
 
-| ParamS | Type     | Default values | Description                                                  |
+| Params | Type     | Default values | Description                                                  |
 | ------ | -------- | -------------- | ------------------------------------------------------------ |
 | `slug` | `string` | `undefined`    | Checkout link alias (Defined when the link is created). |
 
@@ -95,4 +95,4 @@ _Response Body:_
 }
 ```
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/get_checkouts__slug_).
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Checkouts/get_checkouts__slug_).

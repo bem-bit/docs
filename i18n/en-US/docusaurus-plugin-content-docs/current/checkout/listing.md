@@ -2,11 +2,11 @@
 sidebar_position: 2
 ---
 
-# Listado de pagamentos
+# Payments list
 
-### Listando todos os pagamentos
+### Listing all payments
 
-Para listar todos os pagamentos é necessário realizar uma request do tipo **GET** passando os parámetros definidos a continuação:
+To list all payments, it is necessary to make a **GET** request passing the defined parameters as follows:
 
 **URL**
 
@@ -14,22 +14,22 @@ Para listar todos os pagamentos é necessário realizar uma request do tipo **GE
 https://api.bembit.com/api/v1/checkouts
 ```
 
-**Método**
+**Method**
 
 ```
 GET
 ```
 
-**Parametros**
+**Params**
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao ***end-point*** via *headers* no momento da solicitação.
+:::note Important
+The parameters for this request should be passed to the end-point via _headers_ at the time of the request.
 :::
 
-| Parametro | Tipo     | Valor padrão | Descrição                    |
+| Params | Tipo     | Valor padrão | Descrição                    |
 | --------- | -------- | ------------ | ---------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtída na plataforma |
-| `secret`  | `string` | `undefined`  | Secret obtído na plataforma. |
+| `api`     | `string` | `undefined`  | Your _API Key_. |
+| `secret`  | `string` | `undefined`  | Your _secret_. |
 
 ---
 
@@ -39,11 +39,11 @@ Os parametros para essa solicitação devem ser passados ao ***end-point*** via 
 curl -X 'GET' \
   'https://api-sandbox.bembit.com/api/v1/checkouts' \
   -H 'accept: application/json' \
-  -H 'api: [Sua API]' \
-  -H 'secret: [Seu secret]'
+  -H 'api: [API]' \
+  -H 'secret: [Secret]'
 ```
 
-**Respostas do Server:**
+**Server Responses:**
 
 ### Status 200:
 
@@ -76,20 +76,21 @@ _Response Body:_
 ]
 ```
 
-- **_Title:_** Título ou nome do _Link de pagamento_, definido ao momento da criação.
-- **_Description:_** Descrição do _link / pagamento_.
-- **_Slug:_** Alias do link de pagamento (definido no momento da criação).
-- **_Active:_** Status do _Link de pagamento_ podendo ser **_True_** ou **_False_**.
-- **_paymentMethodPix / expiryTimeInMinutes:_** Tempo de validade em _minutos_ do **QR** gerado para pagamento.
-- **_paymentMethodPix / enabled:_** Status do metodo **PIX**, **_true_** se estiver habilidato ou **_false_** se não.
-- **_paymentMethodCrypto / highlightTokens:_** É um **_Array de strings_** com os _símbolos_ dos **tokens** aceitos.
-- **_paymentMethodCrypto / enabled:_** Define se o pagamento por **_Cryptomoedas_** é aceito.
-- **_paymentMethodCrypto / allTokens:_** É **_true_** caso sejam aceitas _todas_ as criptomoedas, caso contrario é **_false_**.
-- **_paymentMethodCrypto / expiryTimeInMinutes:_** Tempo de validade em _minutos_ do **QR** gerado para pagamento.
-- **_Logo:_** _URL_ da imagem do logo utilizado no link de pagamento.
-- **_CreatedAt:_** Data de criação do link de pagamento.
-- **_UpdatedAt:_** Data de atualização do link de pagamento (caso tenha sido atualizado).
-- **_Id:_** Identificador do link de pagamento.
+
+- **_Title:_** It's _Checkout's_ title, defined when the link is first created.
+- **_Description:_** Payment description.
+- **_Slug:_** Payment's alias (defined when the link is first created).
+- **_Active:_** _Checkout's link_ status.
+- **_paymentMethodPix / expiryTimeInMinutes:_** Time in _minutes_ for the **QR Code's** lifetime.
+- **_paymentMethodPix / enabled:_** Indicate the instances in which the **PIX** payment method is accessible for the ongoing payment process.
+- **_paymentMethodCrypto / highlightTokens:_** It's an **_Array of strings_** that contains all the symbols from the accepted cryptocurrencies for the ongoing payment.
+- **_paymentMethodCrypto / enabled:_** Indicate the instances in which the **Crypto** payment method is accessible for the ongoing payment process.
+- **_paymentMethodCrypto / allTokens:_** It will appear as **true** when all cryptocurrencies are accepted on the current payment.
+- **_paymentMethodCrypto / expiryTimeInMinutes:_** Time in _minutes_ for the current's **payment** lifetime.
+- **_Logo:_** The **_URL_** of the _payment's logo_ image.
+- **_CreatedAt:_** Payment creation date.
+- **_UpdatedAt:_** Payment update date.
+- **_Id:_** The ongoing payment ID.
 
 ### Status 401:
 
@@ -101,4 +102,4 @@ _Response Body:_
 }
 ```
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Checkouts/get_checkouts).
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Checkouts/get_checkouts).
