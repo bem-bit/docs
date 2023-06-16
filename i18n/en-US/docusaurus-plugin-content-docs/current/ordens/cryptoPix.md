@@ -2,11 +2,11 @@
 sidebar_position: 9
 ---
 
-# Cripto com PIX
+# Using PIX
 
-### Compra de Crypto usando PIX.
+### Buy cryptocurrencies using PIX as payment.
 
-Para realizar um *SWAP* ou comprar *criptomoedas* utilizando ***PIX***, é necessário realizar uma request do tipo **POST** com a seguinte configuração:
+To perform a **SWAP** or purchase _cryptocurrencies_ using **PIX**, you need to make a **POST** request with the following configuration:
 
 **URL**
 
@@ -14,22 +14,22 @@ Para realizar um *SWAP* ou comprar *criptomoedas* utilizando ***PIX***, é neces
 https://api.bembit.com/api/v1/orders/swap/fiat-to-crypto
 ```
 
-**Método**
+**Method**
 
 ```
 POST
 ```
 
-### Parametros
+### Params
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_, junto com o **_request body_** no momento da solicitação.
+:::note Important!
+The _parameters_ for this request should be passed to the endpoint via _headers_, along with the **request body** at the time of the request.
 :::
 
-| Parametro | Tipo     | Valor padrão | Descrição                    |
-| --------- | -------- | ------------ | ---------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtída na plataforma |
-| `secret`  | `string` | `undefined`  | Secret obtído na plataforma. |
+| Params   | Type     | Default values | Description  |
+| -------- | -------- | -------------- | ------------ |
+| `api`    | `string` | `undefined`    | Your API.    |
+| `secret` | `string` | `undefined`    | Your Secret. |
 
 # cURL
 
@@ -37,15 +37,15 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'POST' \
   'https://api.bembit.com/api/v1/orders/swap/fiat-to-crypto' \
   -H 'accept: */*' \
-  -H 'api: {Sua API}' \
-  -H 'secret: {Seu secret}' \
+  -H 'api: {Your API}' \
+  -H 'secret: {Your secret}' \
   -H 'Content-Type: application/json' \
   -d '{
   "amount": 1,
   "recipient": {
     "tokenToReceive": "string",
     "walletToReceive": "string",
-    "network": integer
+    "network": integer,
   }
 }'
 ```
@@ -63,12 +63,12 @@ curl -X 'POST' \
 }
 ```
 
-- **_amount:_** Valor da troca.
-- **_recipient / tokenToReceive:_** Simbolo do *token* que esta sendo comprado.
-- **_recipient / walletToReceive:_** Endereço da *wallet* donde ira ser enviado o *token* ao finalizar a operação.
-- **_recipient / network:_** Número de identificação da **blockchain** donde se encontra o *token* que esta sendo comprado.
+- **_amount:_** Swap **value**.
+- **_recipient / tokenToReceive:_** Symbol of the _token_ being purchased.
+- **_recipient / walletToReceive:_** _Address_ of the **wallet** where the **token** will be sent upon completing the operation.
+- **_recipient / network:_** Identification number of the **blockchain** where the **token** being purchased is located.
 
-## Respostas do Server:
+## Server Responses:
 
 ### Status 200:
 
@@ -82,4 +82,4 @@ curl -X 'POST' \
 
     Unable to do swap
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Orders/post_orders_swap_fiat_to_crypto).
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Orders/post_orders_swap_fiat_to_crypto).
