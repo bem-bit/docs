@@ -2,29 +2,38 @@
 sidebar_position: 2
 ---
 
-## Listado das Redes disponiveis
+## Available Networks
 
-Para receber uma lista com as redes disponiveis é necessário realizar uma solicitação do tipo **POST** ao ***end-point*** seguindo a seguinte estrutura.
+To receive a list of available networks, it is necessary to make a _GET_ request to the _end-point_ following the following structure.
 
-URL
-```
-api/v1/integrations/quotation/networks
-```
+### URL
 
-Método
 ```
-POST
+https://api.bembit.com/api/v1/quotation/networks
 ```
 
-:::note Observação
-Não possui parametros.
+### Method
+```
+GET
+```
+
+:::note Important
+This end-point does not require any parameters.
 :::
 
-# Valores de exemplo:
+### Response Body:
 
-- ***network:*** Id da *Blockchain*(rede) que da suporte à negociação dos **Tokens** inclusos na transação.
-- ***name:*** Nome do **Token**.
+```c
+[
+  {
+    "id": 56,
+    "name": "BSC"
+  }
+]
+```
 
-![Bembit API](/img/bembit_api_networks_value.png "Example value")
+- ***id:*** The _ID_ of the *Blockchain*(_network_) supporting the trading pair.
+- ***name:*** **Token** name.
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Quotation/post_integrations_quote).
+
+See and test our **API** on [Swagger](https://api.bembit.com/docs/#/Quotation/get_quotation_networks).
