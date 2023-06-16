@@ -1,5 +1,5 @@
-# Ordens
+# Orders
 
-Os endpoints desse grupo são um conjunto de interfaces projetadas para permitir o controle eficiente e a manipulação de ordens na nossa plataforma. 
+The endpoints of this group are a set of interfaces designed to allow efficient control and manipulation of orders on our platform.
 
-Esses endpoints oferecem uma maneira conveniente para que os desenvolvedores interajam com o sistema, fornecendo funcionalidades como o envio de ordens, exibição de informações sobre ordens existentes, listagem de ordens e até mesmo a possibilidade de cancelá-las. Essas APIs desempenham um papel essencial em sistemas de negociação, plataformas de comércio eletrônico, aplicativos financeiros e outros sistemas onde a execução e o gerenciamento de ordens são fundamentais.
+These endpoints offer a convenient way for developers to interact with the system, providing functionalities such as order submission, displaying information about existing orders, listing orders, and even the possibility of canceling them. These APIs play an essential role in trading systems, e-commerce platforms, financial applications, and other systems where order execution and management are crucial.

@@ -2,11 +2,11 @@
 sidebar_position: 1
 ---
 
-# Listagem de ordens
+# Orders list
 
-### Obtendo um listado com todas as ordens
+### Retrieving the orders list.
 
-Para obter uma lista com todas as ordens criadas na sua conta, é necessário realizar uma request do tipo **GET** seguindo os parámetros a continuação:
+To obtain a list of all orders created in your account, it is necessary to make a **GET** request following the parameters provided below:
 
 **URL**
 
@@ -14,22 +14,22 @@ Para obter uma lista com todas as ordens criadas na sua conta, é necessário re
 https://api.bembit.com/api/v1/orders
 ```
 
-**Método**
+**Method**
 
 ```
 GET
 ```
 
-**Parametros**
+**Params**
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_.
+:::note Important!
+The parameters for this request must be passed to the **end-point** via _headers_.
 :::
 
-| Parametro | Tipo     | Valor padrão | Descrição                    |
-| --------- | -------- | ------------ | ---------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtída na plataforma |
-| `secret`  | `string` | `undefined`  | Secret obtído na plataforma. |
+| Params   | Type     | Default values | Description  |
+| -------- | -------- | -------------- | ------------ |
+| `api`    | `string` | `undefined`    | Your API Key |
+| `secret` | `string` | `undefined`    | Your Secret  |
 
 # cURL
 
@@ -37,12 +37,13 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'GET' \
   'https://api.bembit.com/api/v1/orders' \
   -H 'accept: application/json' \
-  -H 'api: [Sua API]' \
-  -H 'secret: [Seu Secret]'
+  -H 'api: [Your API]' \
+  -H 'secret: [Your Secret]'
 ```
+
 ---
 
-## Respostas do Server:
+## Server Responses:
 
 ### Status 200:
 
@@ -67,17 +68,17 @@ _Response Example value:_
 ]
 ```
 
-- **_application:_** Define a aplicação para a qual foi criada essa ordem em especifico, pudendo ser *Checkout*, *Swap*, *Exchange*.
-- **_status:_** Mostra o ***estado*** da ordem ao momento da consulta.
-- **_subtotal:_** Mostra o valor da ordem sem considerar as taxas.
-- **_total:_** Mostra o valor da ordem considerando as taxas.
-- **_fee:_** Refere-se à taxa aplicada a essa ordem.
-- **_rate:_** Representa a cotação do **Dolar**, em **Reais Brasileiros**, no momento da criação da ordem.
-- **_discount/fixed:_** Valor fixo de desconto, caso houver.
-- **_discount/percentage:_** Percentage de desconto, caso houver.
+- **_application:_** States what application is using this order, values can be _Checkout_, _Swap_, _Exchange_.
+- **_status:_** Shows the **_status_** of the current order.
+- **_subtotal:_** Displays the cost of this order without fee values.
+- **_total:_** Represents the total cost of the order including fees.
+- **_fee:_** Fee values when applies.
+- **_rate:_** It's the base **US Dollar** quotation regarding **Brazilian Real**, at the momment the order was created.
+- **_discount/fixed:_** Discount values when applies.
+- **_discount/percentage:_** Discount percent, when applies.
 
 ### Status 403:
 
     Unauthorized
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Orders/get_orders).
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Orders/get_orders).
