@@ -2,38 +2,40 @@
 sidebar_position: 5
 ---
 
-# Cotação da troca (USD)
+# Base Quote (USD/BRL)
 
-Devolve o valor atual do **Dolar** respeito ao **Real Brasileiro**, representado com a *stablecoin* ***USDT***.
+Returns the **Dolar vs Brazilian Real** quote valid at the momment of the request.
 
 **URL**
-```
-https://api.bembit.com/api/v1/quotation/book/{valor}
-``` 
 
-**Método**
+```
+https://api.bembit.com/api/v1/quotation/book/{value}
+```
+
+**Method**
 
 ```
 GET
 ```
 
-**Parametros** 
+**Params**
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao ***end-point*** via *path* no momento da solicitação.
+:::note Important!
+Params for this _request_ must be passed through the _URI_ when the _request_ is made.
 :::
 
-| Parametro | Tipo | Valor padrão | Descrição |
-| --------- | ---- | ------------ | --------- |
-| `amount` | `number` | `0` | Valor escolhido |
+| Params   | Type     | Default values | Description   |
+| -------- | -------- | -------------- | ------------- |
+| `amount` | `number` | `0`            | Desired value |
 
 ### cURL
 
 ```c
 curl -X 'GET' \
-  'https://api.bembit.com/api/v1/quotation/book/{valor}' \
+  'https://api.bembit.com/api/v1/quotation/book/{value}' \
   -H 'accept: application/json'
 ```
+
 ### Response Body
 
 ```c
@@ -44,9 +46,10 @@ curl -X 'GET' \
   "currency": "BRL"
 }
 ```
-- ***amount:*** Valor inicial da troca.
-- ***buy:*** Quantidade de tokens que estão sendo comprados.
-- ***sell:*** Quantidade de tokens que estão sendo vendidos.
-- ***currency:*** Moeda inicial da troca.
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Quotation/get_quotation_book__amount_).
+- **_amount:_** The amount to be quoted.
+- **_buy:_** How many _tokens_ will be **bought**.
+- **_sell:_** How many _tokens_ will be **sold**.
+- **_currency:_** Currency being quoted.
+
+See and test our _API_ on [Swagger](https://api.bembit.com/docs/#/Quotation/get_quotation_book__amount_).
