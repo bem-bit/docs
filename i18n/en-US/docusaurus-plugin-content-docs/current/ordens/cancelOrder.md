@@ -2,14 +2,14 @@
 sidebar_position: 5
 ---
 
-# Cancelamento
+# Cancel order
 
-### Cancelando uma ordem.
+### Need to cancel?, here is what you need to know:
 
-Para cancelar uma _ordem_ na plataforma via **_API_**, é necessário realizar uma request do tipo **DELETE** com a seguinte configuração:
+To cancel an order on the platform via API, it is necessary to make a DELETE request with the following configuration:
 
-:::caution Atencão
-Se a ordem foi criada, e não se encontra em processamento, ela pode ser cancelada.
+:::caution Warning
+**Only** when an order is created but **_has not yet entered the processing stage_**, it can be **canceled**.
 :::
 
 **URL**
@@ -18,23 +18,23 @@ Se a ordem foi criada, e não se encontra em processamento, ela pode ser cancela
 https://api-sandbox.bembit.com/api/v1/orders/{id}/cancel
 ```
 
-**Método**
+**Method**
 
 ```
 DELETE
 ```
 
-### Parametros
+### Params
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_, junto com o **_request body_** no momento da solicitação.
+:::note Important
+The parameters for this _request_ should be passed to the **endpoint** via **_headers_**, along with the **_request body_** at the time of the request.
 :::
 
-| Parametro | Tipo     | Valor padrão | Descrição                    |
-| --------- | -------- | ------------ | ---------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtida na plataforma |
-| `secret`  | `string` | `undefined`  | Secret obtido na plataforma. |
-| `id`      | `string` | `undefined`  | Id da ordem.                 |
+| Params   | Type     | Default values | Description      |
+| -------- | -------- | -------------- | ---------------- |
+| `api`    | `string` | `undefined`    | Your **API Key** |
+| `secret` | `string` | `undefined`    | Your **Secret**  |
+| `id`     | `string` | `undefined`    | Order **ID**.    |
 
 ### cURL:
 
@@ -42,11 +42,11 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'DELETE' \
   'https://api-sandbox.bembit.com/api/v1/orders/{id}/cancel' \
   -H 'accept: */*' \
-  -H 'api: [Sua API]' \
-  -H 'secret: [Seu secret]'
+  -H 'api: [Your API]' \
+  -H 'secret: [Your secret]'
 ```
 
-## Respostas do Server:
+## Server Responses:
 
 ### Status 200:
 
@@ -60,4 +60,4 @@ curl -X 'DELETE' \
 
     Order not found
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Orders/delete_orders__id__cancel).
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Orders/delete_orders__id__cancel).

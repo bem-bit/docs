@@ -2,11 +2,11 @@
 sidebar_position: 4
 ---
 
-# Ordem de saque
+# Withdrawals
 
-### Criando uma ordem de saque.
+### Making a withdraw request order.
 
-Para realizar um _pedido de saque_ na plataforma via **_API_**, é necessário realizar uma request do tipo **POST** com a seguinte configuração:
+To make a _withdrawal_ request on the platform via _API_, it is necessary to make a **POST** request with the following configuration:
 
 **URL**
 
@@ -14,24 +14,24 @@ Para realizar um _pedido de saque_ na plataforma via **_API_**, é necessário r
 https://api.bembit.com/api/v1/orders/withdraw
 ```
 
-**Método**
+**Method**
 
 ```
 POST
 ```
 
-### Parametros
+### Params
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_, junto com o **_request body_** no momento da solicitação.
+:::note Important!
+The parameters for this _request_ should be passed to the _endpoint_ via _headers_, along with the request _body_ at the time of the request.
 :::
 
-| Parametro  | Tipo      | Valor padrão | Descrição                    |
-| ---------- | --------- | ------------ | ---------------------------- |
-| `api`      | `string`  | `undefined`  | API Key obtída na plataforma |
-| `secret`   | `string`  | `undefined`  | Secret obtído na plataforma. |
-| `currency` | `string`  | `undefined`  | Moeda escolhida pra saque.   |
-| `amount`   | `integer` | `0`          | Valor da operação.           |
+| Params     | Type      | Default values | Description                        |
+| ---------- | --------- | -------------- | ---------------------------------- |
+| `api`      | `string`  | `undefined`    | Your API Key                       |
+| `secret`   | `string`  | `undefined`    | Your Secret                        |
+| `currency` | `string`  | `undefined`    | The selected currency to withdraw. |
+| `amount`   | `integer` | `0`            | Withdrawal value.                  |
 
 ## cURL:
 
@@ -39,8 +39,8 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'POST' \
   'https://api.bembit.com/api/v1/orders/withdraw' \
   -H 'accept: */*' \
-  -H 'api: [Sua API]' \
-  -H 'secret: [Seu Secret]' \
+  -H 'api: [Your API]' \
+  -H 'secret: [Your Secret]' \
   -H 'Content-Type: application/json' \
   -d '{
   "currency": "BRL",
@@ -57,10 +57,10 @@ curl -X 'POST' \
 }
 ```
 
-- **_currency:_** Moeda escolhida pra saque.
-- **_amount:_** Valor da operação.
+- **_currency:_** Currency to wihdraw.
+- **_amount:_** Withdrawal value.
 
-## Respostas do Server:
+## Server Responses:
 
 ### Status 200:
 
@@ -74,4 +74,4 @@ curl -X 'POST' \
 
     Unauthorized
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Orders/post_orders_withdraw).
+See and test our **API** on [Swagger](https://api.bembit.com/docs/#/Orders/post_orders_withdraw).

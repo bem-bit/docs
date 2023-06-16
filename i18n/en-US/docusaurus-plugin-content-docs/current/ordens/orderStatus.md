@@ -2,11 +2,11 @@
 sidebar_position: 3
 ---
 
-# Status da ordem
+# Order status
 
-### Obtendo o status de uma ordem.
+### Retrieving the status of an order.
 
-Para obter o status de uma ordem, é necessário realizar uma request do tipo **GET** com a seguinte configuração:
+To obtain the status of an order, it is necessary to make a GET request with the following configuration:
 
 **URL**
 
@@ -14,21 +14,21 @@ Para obter o status de uma ordem, é necessário realizar uma request do tipo **
 https://api.bembit.com/api/v1/orders/{id}/status
 ```
 
-**Método**
+**Method**
 
 ```
 GET
 ```
 
-**Parametros**
+**Params**
 
-:::note Observação
-Para essa solicitação, o _id_ da ordem que esta sendo consultada deve estar incluso na **_URL_** da _request_.
+:::note Important!
+For this request, the **id** of the order being queried must be included in the _URL_ of the request.
 :::
 
-| Parametro | Tipo     | Valor padrão | Descrição    |
-| --------- | -------- | ------------ | ------------ |
-| `id`      | `string` | `undefined`  | Id da ordem. |
+| Params | Type     | Default values | Description |
+| ------ | -------- | -------------- | ----------- |
+| `id`   | `string` | `undefined`    | Order Id.   |
 
 # cURL
 
@@ -40,7 +40,7 @@ curl -X 'GET' \
 
 ---
 
-## Respostas do Server:
+## Server Responses:
 
 ### Status 200:
 
@@ -54,4 +54,4 @@ curl -X 'GET' \
 
     Order not found
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Orders/get_orders__id__status).
+See and _test_ our **API** on [Swagger](https://api.bembit.com/docs/#/Orders/get_orders__id__status).
