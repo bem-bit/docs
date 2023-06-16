@@ -20,7 +20,8 @@ Right after getting access, go to **menu** > **"API"** then click on the **"Gera
 You need to pass the **Keys** inside the requisition via `HEADER` to our `API`.
 
 :::caution WARNING!
-After the **API Keys** issuing process you will be shown your **Private keys** one only time, and after that, you will not be able to see the same **_Private Key_** any more, so make sure you write them down in a safe place so you don't lose that information, in case you miss that time to save the keys you will need to issue a new pair of keys in order to keep using our **API**.
+After the **API Keys** issuing process you will be shown your **Private keys** one only time, and after that, you will not be able to see the same **_Private Key_** any more, so make sure you write them down in a safe place so you don't lose that information, in case you miss that time to save the keys you will need to issue a new pair of keys in order to keep using our **API**. 
+The **rate limit** for all our end-points is ***100reqs/sec*** **API**.
 :::
 
 ## Setting your requisition up

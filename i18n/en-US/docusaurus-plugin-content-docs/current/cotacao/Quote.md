@@ -2,42 +2,82 @@
 sidebar_position: 1
 ---
 
-# Gerando uma cotação
+# Requesting a quote
 
-Para gerar uma cotacão é necessário informar o par de moedas para a transação e em qual rede será feita a transação se a cotação for executada.
+To generate a quotation, it is necessary to provide the _currency pair_ for the transaction, the _amount_ and on which network the transaction will be executed if the quotation is carried out.
 
 URL
 ```
 api/v1/integrations/quotation
 ```
 
-Método
+Method
 ```
 POST
 ```
 
 # Request BODY:
 
-- ***network:*** Id da *Blockchain*(rede) que da suporte à negociação dos **Tokens** inclusos na transação.
-- ***from:*** **Token** base do *swap* ou da *cotação*.
-- ***to:*** **Token** do qual se deseja consultar o valor respeito ao **Token** base.
-- ***amount:*** O valor da transação.
+```c
+{
+  "network": 56,
+  "from": "BRL",
+  "to": "BNB",
+  "amount": 1000
+}
+```
 
-![Bembit API](/img/bembit_api_swap_request.png "Request Body")
-Exemplo do **REQUEST BODY** da solicitação **POST** para a realização de uma troca de *Reais Brasileiros* a um *Token* especificado na hora da criação da cobrança utilizando a ***API** da **Bembit**.
+- ***network:*** The _ID_ of the network (_Blockchain_) supporting the trading pair being quoted.
+- ***from:*** Quotation's base **Token**.
+- ***to:*** **Token** Quote **Token**.
+- ***amount:*** Transaction value.
 
+## Server Responses:
+
+### Status 200:
+
+    Success
 
 # Response BODY:
 
-![Bembit API](/img/bembit_api_quote_response.png "Response Body")
-- ***network:*** Id da *Blockchain*(rede) que da suporte à negociação dos **Tokens** inclusos na transação.
-- from / ***symbol:*** Simbolo do **Token** base na cotação.
-- from / ***name:*** Nome do **Token**.
-- from / ***decimals:*** Casas decimais do **Token**.
-- To / ***symbol:*** Simbolo do **Token** de cotação na operação.
-- To / ***name:*** Nome do **Token**.
-- To / ***decimals:*** Casas decimais do **Token**.
-- ***amount*** Valor final da cotação.
-- ***fee*** Taxa de negociação de uma possivel operação de troca.
+```c
+{
+  "fromToken": {
+    "address": "",
+    "decimals": 2,
+    "logoURI": "",
+    "name": "Brazilian Real",
+    "symbol": "BRL"
+  },
+  "toToken": {
+    "address": "",
+    "symbol": "BNB",
+    "decimals": 18,
+    "name": "BNB",
+    "logoURI": ""
+  },
+  "toTokenAmount": "8251275588511292",
+  "fromTokenAmount": "1972141528764670400",
+  "estimatedGas": 0
+}
+```
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Quotation/post_integrations_quote).
+- fromToken / ***address:*** Base token _Smartcontract address_.
+- fromToken / ***decimais:*** Number of decimals used by the base token.
+- fromToken / ***logoURI:*** Token logo _URL_.
+- fromToken / ***name:*** Base token name.
+- fromToken / ***symbol:*** Base token _symbol_.
+    <hr />
+- toToken / ***address:*** Quote token _Smartcontract address_.
+- toToken / ***symbol:*** Quote token _symbol_.
+- toToken / ***decimais:*** Number of decimals used by the Quote token.
+- toToken / ***name:*** Quote token name.
+- toToken / ***logoURI:*** Token logo _URL_.
+
+    <hr />
+- ***toTokenAmount:*** Quantity of tokens being bought.
+- ***fromTokenAmount:*** Quantity of tokens being sold.
+- ***estimatedGas:*** Estimated transaction fee.
+
+
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Quotation/post_quotation).

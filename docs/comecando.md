@@ -20,7 +20,8 @@ Pronto, uma chave de `API` foi gerada, e nela contêm duas informações:
 Você irá utilizar essas chaves no `HEADER` das requisições para a nossa `API`.
 
 :::caution Atencão
-Certifique de copiar e guarda a chave `secret`, pois após a criação você não terá mais acesso a mesma na plataformas
+Certifique de copiar e guarda a chave `secret`, pois após a criação você não terá mais acesso a mesma na plataformas.
+O **rate limit** dos nossos end-points é de ***100reqs/sec*** **API**.
 :::
 
 

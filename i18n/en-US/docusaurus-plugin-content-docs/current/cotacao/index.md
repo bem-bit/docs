@@ -1,3 +1,3 @@
-# Cotação
+# Quoting
 
-A cotação é um serviço onde você nos informa qual par de moedas deseja comprar.
+It serves as a reliable source for obtaining accurate and up-to-date market data, allowing developers and financial institutions to access cryptocurrency prices programmatically.
