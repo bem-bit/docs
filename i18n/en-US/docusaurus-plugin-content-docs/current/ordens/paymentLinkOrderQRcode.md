@@ -2,11 +2,11 @@
 sidebar_position: 8
 ---
 
-# Link de pagamento (QR Code)
+# Checkout's QR Code
 
-### Obtendo o QR Code do pedido.
+### Getting the QR Code image.
 
-Para obter a imagem do QR code de um pedido atrelado ao seu link de pagamento é necessário realizar uma request do tipo **GET** com a seguinte configuração:
+To obtain the ***QR code*** image of an order associated with your _payment link_, you need to make a **GET** request with the following configuration:
 
 **URL**
 
@@ -14,7 +14,7 @@ Para obter a imagem do QR code de um pedido atrelado ao seu link de pagamento é
 https://api-sandbox.bembit.com/api/v1/orders/{orderId}/qrcode.png
 ```
 
-**Método**
+**Method**
 
 ```
 GET
@@ -27,17 +27,17 @@ curl -X 'GET' \
   -H 'accept: image/png'
 ```
 
-### Parametros
+### Params
 
-:::note Observação
-O parametro _checkoutid_ vai embutido no **_URI_** da solicitação como mostra o link acima.
+:::note Important
+The parameter ***checkoutid*** should be embedded in the ***URI*** of the request, as shown in the link above.
 :::
 
-| Parametro    | Tipo     | Valor padrão | Descrição                                                       |
+| Params    | Type     | Default values | Description                                                       |
 | ------------ | -------- | ------------ | --------------------------------------------------------------- |
-| `orderId`    | `string` | `undefined`  | Id da ordem gerada ao momento da sua criação                    |
+| `orderId`    | `string` | `undefined`  | Order **ID**.|
 
-## Respostas do Server:
+## Server Responses:
 
 ### Status 200:
 
@@ -51,4 +51,4 @@ O parametro _checkoutid_ vai embutido no **_URI_** da solicitação como mostra 
 
     Order not found
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Orders/get_orders__id__qrcode_png).
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Orders/get_orders__id__qrcode_png).

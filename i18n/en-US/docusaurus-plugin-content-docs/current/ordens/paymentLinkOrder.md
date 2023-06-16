@@ -2,11 +2,11 @@
 sidebar_position: 6
 ---
 
-# Link de pagamento
+# Checkout links
 
-### Criando um pedido pelo link de pagamento.
+### Creating a checkout payment link.
 
-Para gerar um pedido atrelado ao seu link de pagamento na plataforma via **_API_**, é necessário realizar uma request do tipo **POST** com a seguinte configuração:
+To _generate_ an order associated with your **_payment link_** on the platform via **API**, you need to make a **POST** request with the following configuration:
 
 **URL**
 
@@ -14,22 +14,21 @@ Para gerar um pedido atrelado ao seu link de pagamento na plataforma via **_API_
 https://api.bembit.com/api/v1/orders/{checkoutid}/checkout
 ```
 
-**Método**
+**Method**
 
 ```
 POST
 ```
 
-### Parametros
+### Params
 
-:::note Observação
-O parametro *checkoutid* vai embutido no ***URI*** da solicitação como mostra o link acima.
+:::note Important
+The parameter **_checkoutid_** is embedded in the **URI** of the request as shown in the link above.
 :::
 
-| Parametro    | Tipo     | Valor padrão | Descrição                                                       |
-| ------------ | -------- | ------------ | --------------------------------------------------------------- |
-| `checkoutid` | `string` | `undefined`  | Alias correspondente ao link de pagamento, criado na plataforma |
-
+| Params       | Type     | Default values | Descrption                |
+| ------------ | -------- | -------------- | ------------------------- |
+| `checkoutid` | `string` | `undefined`    | Payment's link **alias**. |
 
 **Request Body:**
 
@@ -46,15 +45,15 @@ O parametro *checkoutid* vai embutido no ***URI*** da solicitação como mostra 
 }
 ```
 
-- **_network:_** Número identificador da blockchain sendo utilizada nessa operação.
-- **_currency:_** Simbolo da moeda que é aceita no pedido que esta sendo criado.
-- **_amount:_** Valor do pedido.
-- **_requester / name:_** Nome do pagador.
-- **_requester / email:_** Email do pagador.
-- **_requester / document:_** Documento de identificação do pagador.
+- **_network:_** Identifier number of the blockchain being used in this operation.
+- **_currency:_** Symbol of the currency accepted in the order being created.
+- **_amount:_** The amount to charge.
+- **_requester / name:_** Customer's name.
+- **_requester / email:_** Customer's e-mail.
+- **_requester / document:_** Customer's ID.
 
-:::note Observação
-As informações mostradas no **Request body** devem ser fornecidas à *request* como mostra o seguinte ***cURL***.
+:::note Important
+The information shown in the ***Request body*** should be provided to the request as demonstrated in the following ***cURL***.
 :::
 
 ```c
@@ -65,7 +64,7 @@ curl -X 'POST' \
   -d '{
   "network": {blockchain id number},
   "currency": "currency symbol",
-  "amount": {valor inteiro},
+  "amount": {integer},
   "requester": {
     "name": "string",
     "email": "string",
@@ -74,7 +73,7 @@ curl -X 'POST' \
 }'
 ```
 
-## Respostas do Server:
+## Server Responses:
 
 ### Status 200:
 
@@ -88,4 +87,4 @@ curl -X 'POST' \
 
     Checkout not found
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Orders/post_orders__checkoutId__checkout).
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Orders/post_orders__checkoutId__checkout).

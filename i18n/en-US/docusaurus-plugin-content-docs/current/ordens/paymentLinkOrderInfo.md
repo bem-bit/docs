@@ -2,11 +2,11 @@
 sidebar_position: 7
 ---
 
-# Link de pagamento (info)
+# Checkout link details
 
-### Obtendo informações do pedido feito pelo link de pagamento.
+### Retrieving all information abour a checkout link.
 
-Para consultas as informações de um pedido atrelado ao seu link de pagamento na plataforma via **_API_**, é necessário realizar uma request do tipo **GET** com a seguinte configuração:
+To retrieve information about a specific order associated with your **_checkout page_** using this **API** endpoint, you will need to make a **GET** request with the following configuration;
 
 **URL**
 
@@ -14,31 +14,32 @@ Para consultas as informações de um pedido atrelado ao seu link de pagamento n
 https://api-sandbox.bembit.com/api/v1/orders/{checkoutId}/checkout/{orderId}
 ```
 
-**Método**
+**Method**
 
 ```
 GET
 ```
 
 **cURL**
+
 ```s
 curl -X 'GET' \
   'https://api-sandbox.bembit.com/api/v1/orders/{checkoutId}/checkout/{orderId}' \
   -H 'accept: */*'
 ```
 
-### Parametros
+### Params
 
-:::note Observação
-O parametro _checkoutid_ vai embutido no **_URI_** da solicitação como mostra o link acima.
+:::note Important
+The parameter **checkoutid** should be included in the **_URI_** of the request, as shown in the link above.
 :::
 
-| Parametro    | Tipo     | Valor padrão | Descrição                                                       |
-| ------------ | -------- | ------------ | --------------------------------------------------------------- |
-| `checkoutId` | `string` | `undefined`  | Alias correspondente ao link de pagamento, criado na plataforma |
-| `orderId`    | `string` | `undefined`  | Id da ordem gerada ao momento da sua criação                    |
+| Params       | Type     | Default values | Description                |
+| ------------ | -------- | -------------- | -------------------------- |
+| `checkoutId` | `string` | `undefined`    | Checkout's link **Alias**. |
+| `orderId`    | `string` | `undefined`    | Order **Id**.              |
 
-## Respostas do Server:
+## Server Responses:
 
 ### Status 200:
 
@@ -52,4 +53,4 @@ O parametro _checkoutid_ vai embutido no **_URI_** da solicitação como mostra 
 
     Checkout not found
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Orders/get_orders__checkoutId__checkout__orderId_).
+See and test our API on [Swagger](https://api.bembit.com/docs/#/Orders/get_orders__checkoutId__checkout__orderId_).
