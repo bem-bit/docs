@@ -6,7 +6,7 @@ sidebar_position: 9
 
 ### Compra de Crypto usando PIX.
 
-Para realizar um *SWAP* ou comprar *criptomoedas* utilizando ***PIX***, é necessário realizar uma request do tipo **POST** com a seguinte configuração:
+Para realizar um _SWAP_ ou comprar _criptomoedas_ utilizando **_PIX_**, é necessário realizar uma request do tipo **POST** com a seguinte configuração:
 
 **URL**
 
@@ -46,9 +46,59 @@ curl -X 'POST' \
     "tokenToReceive": "string",
     "walletToReceive": "string",
     "network": integer
+  },
+  "webhook": {
+    "url": "https://URL",
+    "headers": [
+      {
+        "key": "content-type",
+        "value": "application/json",
+      },
+      {
+        "key": "SUA-CHAVE",
+        "value": "SEU-VALOR",
+      },
+    ]
   }
 }'
 ```
+
+## Webhooks
+
+A chave `webhook` do payload não é obrigatória. Ao executar a integração com esse endpoint, você pode fornecer a URL e os Headers personalizados para que ocorram as chamadas nas mudanças de status do referido pedido.
+
+| Evento                    | Descrição                                                                        |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| `SWAP_STARTED`            | Disparado quando o pedido é registrado com sucesso                               |
+| `SWAP_PAYMENT_IDENTIFIED` | Disparado quando o pagamento ref. ao pedido é identificado                       |
+| `SWAP_PAYMENT_EXPIRED`    | Disparado quando o pagamento ref. ao pedido é expirado                           |
+| `SWAP_PAYMENT_BLOCKED`    | Disparado quando o pagamento ref. ao pedido foi pago mas foi invalidado pelo KYC |
+| `SWAP_COMPLETED`          | Disparado após a transferencia dos fundos na blockchain, retorna txId            |
+
+### Payload do webhook
+
+Método: `POST`:`webhook.url`
+
+````json
+{
+  "id": "id-do-pedido",
+  "event": "SWAP_COMPLETED",
+  "from": {
+    "currency": "BRL",
+    "amount": 1000, // R$ 10,00
+  },
+  "to": {
+    "currency": "CAKE",
+    "amount": "14497251241174891463",
+    "network": 56,
+    "address": "wallet-de-destino",
+  },
+  "txId": "0xx" // pode ser nulo
+}
+
+:::caution Atencão
+Essa funcionalidade encontra-se disponível apenas em ambiente de homologação, em breve está disponível no ambiente de produção.
+:::
 
 ## Request Body:
 
@@ -61,12 +111,12 @@ curl -X 'POST' \
     "network": 0
   }
 }
-```
+````
 
 - **_amount:_** Valor da troca.
-- **_recipient / tokenToReceive:_** Simbolo do *token* que esta sendo comprado.
-- **_recipient / walletToReceive:_** Endereço da *wallet* donde ira ser enviado o *token* ao finalizar a operação.
-- **_recipient / network:_** Número de identificação da **blockchain** donde se encontra o *token* que esta sendo comprado.
+- **_recipient / tokenToReceive:_** Simbolo do _token_ que esta sendo comprado.
+- **_recipient / walletToReceive:_** Endereço da _wallet_ donde ira ser enviado o _token_ ao finalizar a operação.
+- **_recipient / network:_** Número de identificação da **blockchain** donde se encontra o _token_ que esta sendo comprado.
 
 ## Respostas do Server:
 
