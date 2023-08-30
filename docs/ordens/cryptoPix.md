@@ -95,6 +95,7 @@ Método: `POST`:`webhook.url`
   },
   "txId": "0xx" // pode ser nulo
 }
+````
 
 :::caution Atencão
 Essa funcionalidade encontra-se disponível apenas em ambiente de homologação, em breve está disponível no ambiente de produção.
