@@ -74,6 +74,7 @@ A chave `webhook` do payload não é obrigatória. Ao executar a integração co
 | `SWAP_PAYMENT_EXPIRED`    | Disparado quando o pagamento ref. ao pedido é expirado                           |
 | `SWAP_PAYMENT_BLOCKED`    | Disparado quando o pagamento ref. ao pedido foi pago mas foi invalidado pelo KYC |
 | `SWAP_COMPLETED`          | Disparado após a transferencia dos fundos na blockchain, retorna txId            |
+| `SWAP_FAILED`             | Disparado após a transferencia dos fundos na blockchain falhar                   |
 
 ### Payload do webhook
 
@@ -85,7 +86,7 @@ Método: `POST`:`webhook.url`
   "event": "SWAP_COMPLETED",
   "from": {
     "currency": "BRL",
-    "amount": 1000, // R$ 10,00
+    "amount": 10000, // R$ 100,00
   },
   "to": {
     "currency": "CAKE",
@@ -93,7 +94,7 @@ Método: `POST`:`webhook.url`
     "network": 56,
     "address": "wallet-de-destino",
   },
-  "txId": "0xx" // pode ser nulo
+  "txId": null
 }
 ````
 
