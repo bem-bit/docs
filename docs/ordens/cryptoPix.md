@@ -98,7 +98,7 @@ Método: `POST`:`webhook.url`
 ````
 
 :::caution Atencão
-Essa funcionalidade encontra-se disponível apenas em ambiente de homologação, em breve está disponível no ambiente de produção.
+Essa funcionalidade encontra-se disponível apenas em ambiente de homologação (sandbox), em breve estará disponível no ambiente de produção.
 :::
 
 ## Request Body:
