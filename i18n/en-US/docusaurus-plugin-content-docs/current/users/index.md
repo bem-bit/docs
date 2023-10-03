@@ -1,3 +1,3 @@
-# Credenciais
+# Managing credentials
 
-Esse end-point disponibiliza diferentes ferramentas para o gerenciamento das credenciais de conexão com a nossa API.
+This endpoint provides various tools for managing connection credentials with our API.

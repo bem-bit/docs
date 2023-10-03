@@ -2,11 +2,11 @@
 sidebar_position: 4
 ---
 
-# Eliminação
+# Deleting a key
 
-### Eliminando uma chave de acesso.
+### Deleting an API Key.
 
-Para eliminar uma chave de acesso **API** utilizamos uma _request_ do tipo **DELETE** como se mostra a continuação;
+In order to eliminate an **API** key it´s sent a **DELETE** request as shown below:
 
 **URL**
 
@@ -20,29 +20,29 @@ https://api.bembit.com/api/v1/users/credentials/{id}
 curl -X 'DELETE' \
   'https://api.bembit.com/api/v1/users/credentials/{id}' \
   -H 'accept: */*' \
-  -H 'api: {Sua API}' \
-  -H 'secret: {Seu secret}'
+  -H 'api: {Your API}' \
+  -H 'secret: {Your secret}'
 ```
 
-**Método**
+**Method**
 
 ```
 DELETE
 ```
 
-### Parametros
+### Params
 
-| Parametro | Tipo     | Valor padrão | Descrição                                            |
-| --------- | -------- | ------------ | ---------------------------------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtída na plataforma                         |
-| `secret`  | `string` | `undefined`  | Secret obtído na plataforma.                         |
-| `id`      | `string` | `undefined`  | Identificador da chave, obtido na criação do acesso. |
+| Param    | Type     | Default values | Description                                          |
+| -------- | -------- | -------------- | ---------------------------------------------------- |
+| `api`    | `string` | `undefined`    | API Key obtained from the platform.                       |
+| `secret` | `string` | `undefined`    | Secret obtained from the platform.                       |
+| `id`     | `string` | `undefined`    | Identificador da chave, obtido na criação do acesso. |
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_, já o ID da chave a ser eliminada é embutida diretamente no **URI** como foi mostrado [aqui](#curl).
+:::note Important
+The parameters for this request should be passed to the endpoint via *headers*, except for the **Key ID**, which should be directly _embedded_ in the **URI** path as shown [here](#curl).
 :::
 
-## Respostas do Server:
+## Server response:
 
 ### Status 200:
 
@@ -52,4 +52,4 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 
     Unauthorized
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Users/delete_users_credentials__id_).
+See this in action on [Swagger](https://api.bembit.com/docs/#/Users/delete_users_credentials__id_).

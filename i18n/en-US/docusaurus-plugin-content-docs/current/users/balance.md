@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Balance
 
-### Obtendo o balance da conta.
+### Getting the account balance.
 
-Para obter as informações do _balance_ da conta é necessario realizar uma request do tipo **_GET_** fornecendo as _credenciais_ correspondentes a traves de **_HEADERS_**.
+To obtain the account balance information, it is necessary to make a GET request, providing the corresponding credentials through HEADERS.
 
 **URL**
 
@@ -14,22 +14,23 @@ Para obter as informações do _balance_ da conta é necessario realizar uma req
 https://api.bembit.com/api/v1/users/balance
 ```
 
-**Método**
+**Method**
 
 ```
 GET
 ```
 
-### Parametros
+### Params
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_.
+:::note Important
+The parameters for this request should be passed to the end-point via headers.
+
 :::
 
-| Parametro | Tipo     | Valor padrão | Descrição                    |
-| --------- | -------- | ------------ | ---------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtída na plataforma |
-| `secret`  | `string` | `undefined`  | Secret obtído na plataforma. |
+| Param    | Type     | Default values | Description                         |
+| -------- | -------- | -------------- | ----------------------------------- |
+| `api`    | `string` | `undefined`    | API Key obtained from the platform. |
+| `secret` | `string` | `undefined`    | Secret obtained from the platform.  |
 
 # cURL
 
@@ -37,11 +38,11 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 curl -X 'GET' \
   'https://api.bembit.com/api/v1/users/balance' \
   -H 'accept: application/json' \
-  -H 'api: {Sua API}' \
-  -H 'secret: {Seu secret}'
+  -H 'api: {Your API}' \
+  -H 'secret: {Your secret}'
 ```
 
-## Respostas do Server:
+## Server responses:
 
 ### Status 200:
 
@@ -63,4 +64,4 @@ curl -X 'GET' \
 
     Unauthorized
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Users/get_users_balance).
+See this in action on [Swagger](https://api.bembit.com/docs/#/Users/get_users_balance).

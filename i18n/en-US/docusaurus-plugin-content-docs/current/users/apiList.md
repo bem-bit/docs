@@ -2,11 +2,11 @@
 sidebar_position: 3
 ---
 
-# Lista de Chaves
+# List of keys
 
-### Obtendo uma lista das chaves de acesso.
+### Obtaining a list of generated API Keys.
 
-Para listar todas as _chaves de acesso_ que se encontram disponiveis na conta utilizamos uma _request_ do tipo **_GET_** seguindo as indicações a continuação;
+In order to get a list of all _API Keys_ previously generated, you must send a **GET** request following those settings:
 
 **URL**
 
@@ -20,28 +20,28 @@ https://api.bembit.com/api/v1/users/credentials
 curl -X 'GET' \
   'https://api.bembit.com/api/v1/users/credentials' \
   -H 'accept: */*' \
-  -H 'api: {Sua API}' \
-  -H 'secret: {Seu secret}'
+  -H 'api: {Your API}' \
+  -H 'secret: {Your secret}'
 ```
 
-**Método**
+**Methods**
 
 ```
 GET
 ```
 
-### Parametros
+### Params
 
-| Parametro | Tipo     | Valor padrão | Descrição                    |
-| --------- | -------- | ------------ | ---------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtída na plataforma |
-| `secret`  | `string` | `undefined`  | Secret obtído na plataforma. |
+| Param    | Type     | Default values | Description                         |
+| -------- | -------- | -------------- | ----------------------------------- |
+| `api`    | `string` | `undefined`    | API Key obtained from the platform. |
+| `secret` | `string` | `undefined`    | Secret obtained from the platform.  |
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_.
+:::note Important
+The parameters for this request should be passed to the end-point via _headers_.
 :::
 
-## Respostas do Server:
+## Server responses:
 
 ### Status 200:
 
@@ -52,11 +52,11 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 ```c
 [
   {
-    "key": "{Chave de acesso}",
-    "expiresAt": "{Data de expiração}",
-    "createdAt": "{Data de criação}",
-    "updatedAt": "{Data de atualização}",
-    "id": "{Id da chave de acesso}"
+    "key": "{Access key}",
+    "expiresAt": "{Expiration date}",
+    "createdAt": "{Creation date}",
+    "updatedAt": "{Date of update}",
+    "id": "{Access key ID}"
   },
   {
     "key": "xxxxxx",
@@ -72,4 +72,4 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 
     Unauthorized
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Users/get_users_credentials).
+See this in action on [Swagger](https://api.bembit.com/docs/#/Users/get_users_credentials).

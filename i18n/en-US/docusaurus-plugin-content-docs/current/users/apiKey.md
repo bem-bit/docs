@@ -4,13 +4,13 @@ sidebar_position: 2
 
 # API Key
 
-### Criando uma nova Chave de acesso API.
+### Creating a new API Access Key.
 
-:::caution Atencão
-Esse *end-point* é utilitario, para poder utilizar ele é necessario ter criado uma primeira chave de acesso à **API** desde a interface da plataforma, e no caso de precisar mais chaves adicionais então podera utilizar esse **end-point** para isto.
+:::caution Warning
+This end-point is utility-oriented. To use it, you need to have already created an initial API access key through the platform's interface, and in case you need additional keys, you can use this end-point for that purpose.
 :::
 
-Para criar uma chave de acesso à **API** é necessario realizar uma request do tipo **POST** ao **URL** detalhado mais embaixo;
+To create an API access key, it is necessary to make a POST request to the URL provided below:
 
 **URL**
 
@@ -19,33 +19,34 @@ https://api.bembit.com/api/v1/users/credentials
 ```
 
 # cURL
+
 ```c
 curl -X 'POST' \
   'https://api.bembit.com/api/v1/users/credentials' \
   -H 'accept: application/json' \
-  -H 'api: {Sua API}' \
-  -H 'secret: {Seu secret}' \
+  -H 'api: {Your API}' \
+  -H 'secret: {Your secret}' \
   -d ''
 ```
 
-**Método**
+**Methods**
 
 ```
 POST
 ```
 
-### Parametros
+### Params
 
-| Parametro | Tipo     | Valor padrão | Descrição                    |
-| --------- | -------- | ------------ | ---------------------------- |
-| `api`     | `string` | `undefined`  | API Key obtída na plataforma |
-| `secret`  | `string` | `undefined`  | Secret obtído na plataforma. |
+| Param    | Type     | Default values | Description                         |
+| -------- | -------- | -------------- | ----------------------------------- |
+| `api`    | `string` | `undefined`    | API Key obtained from the platform. |
+| `secret` | `string` | `undefined`    | Secret obtained from the platform.  |
 
-:::note Observação
-Os parametros para essa solicitação devem ser passados ao **_end-point_** via _headers_.
+:::note Important
+The parameters for this request should be passed to the end-point via _headers_.
 :::
 
-## Respostas do Server:
+## Server responses:
 
 ### Status 200:
 
@@ -55,9 +56,9 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 
 ```c
 {
-  "key": "{ Nova chave API }",
-  "secret": "{ Novo secret }",
-  "expiresAt": "{ Data da geração da chave de acesso}"
+  "key": "{ New API key }",
+  "secret": "{ New secret }",
+  "expiresAt": "{ API Key expiration date }"
 }
 ```
 
@@ -65,4 +66,4 @@ Os parametros para essa solicitação devem ser passados ao **_end-point_** via 
 
     Unauthorized
 
-Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Users/post_users_credentials).
+See this in action on [Swagger](https://api.bembit.com/docs/#/Users/post_users_credentials).
