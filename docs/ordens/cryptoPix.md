@@ -62,6 +62,7 @@ curl -X 'POST' \
   }
 }'
 ```
+
 ## Request Body:
 
 ```json
@@ -71,9 +72,18 @@ curl -X 'POST' \
     "tokenToReceive": "string",
     "walletToReceive": "string",
     "network": 0
+  },
+  "webhook": {
+    "url": "string",
+    "headers": [
+      {
+        "key": "string",
+        "value": "string"
+      }
+    ]
   }
 }
-````
+```
 
 - **_amount:_** Valor da troca.
 - **_recipient / tokenToReceive:_** Simbolo do _token_ que esta sendo comprado.
