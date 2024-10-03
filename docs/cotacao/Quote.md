@@ -7,11 +7,13 @@ sidebar_position: 1
 Faz a cotação de um token para outro (deve refazer a cotação a cada 30 segudos).
 
 URL
+
 ```
 https://api.bembit.com/api/v1/quotation
 ```
 
 Método
+
 ```
 POST
 ```
@@ -22,15 +24,15 @@ POST
 {
   "network": 56,
   "from": "BRL",
-  "to": "BNB",
-  "amount": 1000
+  "to": "WBNB",
+  "amount": 2500
 }
 ```
 
-- ***network:*** Id da *Blockchain*(rede) que da suporte à negociação dos **Tokens** inclusos na transação.
-- ***from:*** **Token** base do *swap* ou da *cotação*.
-- ***to:*** **Token** do qual se deseja consultar o valor respeito ao **Token** base.
-- ***amount:*** O valor da transação.
+- **_network:_** Id da _Blockchain_(rede) que da suporte à negociação dos **Tokens** inclusos na transação.
+- **_from:_** **Token** base do _swap_ ou da _cotação_.
+- **_to:_** **Token** do qual se deseja consultar o valor respeito ao **Token** base.
+- **_amount:_** O valor da transação.
 
 ## Respostas do Server:
 
@@ -62,22 +64,22 @@ POST
 }
 ```
 
-- fromToken / ***address:*** Endereço do contrato inteligente da moeda de venda, se for o caso.
-- fromToken / ***decimais:*** Casas decimais que utiliza a moeda que estamos vendendo.
-- fromToken / ***logoURI:*** Endereço da imagem que corresponde ao logo da moeda.
-- fromToken / ***name:*** Nome da moeda de venda.
-- fromToken / ***symbol:*** Simbolo da moeda de venda.
+- fromToken / **_address:_** Endereço do contrato inteligente da moeda de venda, se for o caso.
+- fromToken / **_decimais:_** Casas decimais que utiliza a moeda que estamos vendendo.
+- fromToken / **_logoURI:_** Endereço da imagem que corresponde ao logo da moeda.
+- fromToken / **_name:_** Nome da moeda de venda.
+- fromToken / **_symbol:_** Simbolo da moeda de venda.
     <hr />
-- toToken / ***address:*** Endereço do contrato inteligente da moeda de compra, se for o caso.
-- toToken / ***symbol:*** Simbolo da moeda de compra.
-- toToken / ***decimais:*** Casas decimais que utiliza a moeda que estamos comprando.
-- toToken / ***name:*** Nome da moeda de compra.
-- toToken / ***logoURI:*** Endereço da imagem que corresponde ao logo da moeda de compra.
+- toToken / **_address:_** Endereço do contrato inteligente da moeda de compra, se for o caso.
+- toToken / **_symbol:_** Simbolo da moeda de compra.
+- toToken / **_decimais:_** Casas decimais que utiliza a moeda que estamos comprando.
+- toToken / **_name:_** Nome da moeda de compra.
+- toToken / **_logoURI:_** Endereço da imagem que corresponde ao logo da moeda de compra.
 
     <hr />
-- ***toTokenAmount:*** Valor da moeda que estamos comprando.
-- ***fromTokenAmount:*** Valor da moeda que estamos vendendo.
-- ***estimatedGas:*** Valor estimado do gas que a transação ira cobrar para ser realizada.
 
+- **_toTokenAmount:_** Valor da moeda que estamos comprando.
+- **_fromTokenAmount:_** Valor da moeda que estamos vendendo.
+- **_estimatedGas:_** Valor estimado do gas que a transação ira cobrar para ser realizada.
 
 Veja em execução em nosso [Swagger](https://api.bembit.com/docs/#/Quotation/post_quotation).

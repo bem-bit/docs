@@ -7,11 +7,13 @@ sidebar_position: 1
 To generate a quotation, it is necessary to provide the _currency pair_ for the transaction, the _amount_ and on which network the transaction will be executed if the quotation is carried out.
 
 URL
+
 ```
 api/v1/integrations/quotation
 ```
 
 Method
+
 ```
 POST
 ```
@@ -22,15 +24,15 @@ POST
 {
   "network": 56,
   "from": "BRL",
-  "to": "BNB",
-  "amount": 1000
+  "to": "WBNB",
+  "amount": 2500
 }
 ```
 
-- ***network:*** The _ID_ of the network (_Blockchain_) supporting the trading pair being quoted.
-- ***from:*** Quotation's base **Token**.
-- ***to:*** **Token** Quote **Token**.
-- ***amount:*** Transaction value.
+- **_network:_** The _ID_ of the network (_Blockchain_) supporting the trading pair being quoted.
+- **_from:_** Quotation's base **Token**.
+- **_to:_** **Token** Quote **Token**.
+- **_amount:_** Transaction value.
 
 ## Server Responses:
 
@@ -62,22 +64,22 @@ POST
 }
 ```
 
-- fromToken / ***address:*** Base token _Smartcontract address_.
-- fromToken / ***decimais:*** Number of decimals used by the base token.
-- fromToken / ***logoURI:*** Token logo _URL_.
-- fromToken / ***name:*** Base token name.
-- fromToken / ***symbol:*** Base token _symbol_.
+- fromToken / **_address:_** Base token _Smartcontract address_.
+- fromToken / **_decimais:_** Number of decimals used by the base token.
+- fromToken / **_logoURI:_** Token logo _URL_.
+- fromToken / **_name:_** Base token name.
+- fromToken / **_symbol:_** Base token _symbol_.
     <hr />
-- toToken / ***address:*** Quote token _Smartcontract address_.
-- toToken / ***symbol:*** Quote token _symbol_.
-- toToken / ***decimais:*** Number of decimals used by the Quote token.
-- toToken / ***name:*** Quote token name.
-- toToken / ***logoURI:*** Token logo _URL_.
+- toToken / **_address:_** Quote token _Smartcontract address_.
+- toToken / **_symbol:_** Quote token _symbol_.
+- toToken / **_decimais:_** Number of decimals used by the Quote token.
+- toToken / **_name:_** Quote token name.
+- toToken / **_logoURI:_** Token logo _URL_.
 
     <hr />
-- ***toTokenAmount:*** Quantity of tokens being bought.
-- ***fromTokenAmount:*** Quantity of tokens being sold.
-- ***estimatedGas:*** Estimated transaction fee.
 
+- **_toTokenAmount:_** Quantity of tokens being bought.
+- **_fromTokenAmount:_** Quantity of tokens being sold.
+- **_estimatedGas:_** Estimated transaction fee.
 
 See and test our API on [Swagger](https://api.bembit.com/docs/#/Quotation/post_quotation).
